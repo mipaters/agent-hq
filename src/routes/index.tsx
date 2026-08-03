@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
+import { CommonArchitectureButton } from "@/components/hq/common-architecture";
 import { HouseDiagram } from "@/components/hq/house-diagram";
 import { Button } from "@/components/ui/button";
 import { heroMessage, priorityAreas } from "@/lib/hq-data";
@@ -60,6 +61,7 @@ function CommandCenter() {
           <Button asChild variant="secondary">
             <Link to="/marketplace">Browse the AI Agent Marketplace</Link>
           </Button>
+          <CommonArchitectureButton variant="outline" />
         </div>
       </section>
 
