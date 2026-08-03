@@ -1083,7 +1083,7 @@ export const governanceStatement =
   "Agent365 provides the enterprise control plane for agent inventory, ownership, policy, observability, certification, auditability, and lifecycle management. The marketplace helps teams discover agents. Agent365 helps the enterprise govern them.";
 
 export const architectureStatement =
-  "Each individual agentic solution can be delivered as a Microsoft-native agent experience, while Power BI provides embedded analytics, KPI reporting, adoption tracking, and value realization. The HQ app creates a unified executive operating model across all published agents.";
+  "Each agentic solution blueprint can be delivered as a Microsoft-native agent experience, while Power BI provides embedded analytics, KPI reporting, adoption tracking, and value realization. The HQ app creates a unified executive operating model across the whole blueprint portfolio.";
 
 export const walkthroughSteps = [
   {
@@ -1098,7 +1098,7 @@ export const walkthroughSteps = [
   },
   {
     title: "Specialized agents",
-    body: "Each room contains specialized agents already published and available to launch.",
+    body: "Each room holds blueprints for specialized agents your teams can build with Microsoft Frontier Company FDE and Industry support — every one is demonstrable today.",
     to: "/rooms",
   },
   {
