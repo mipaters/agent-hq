@@ -10,33 +10,128 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ArchitectureRouteImport } from './routes/architecture'
+import { Route as DirectoryRouteImport } from './routes/directory'
+import { Route as GovernanceRouteImport } from './routes/governance'
+import { Route as MarketplaceRouteImport } from './routes/marketplace'
+import { Route as MissionControlRouteImport } from './routes/mission-control'
+import { Route as RoiRouteImport } from './routes/roi'
+import { Route as RoomsRouteImport } from './routes/rooms'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ArchitectureRoute = ArchitectureRouteImport.update({
+  id: '/architecture',
+  path: '/architecture',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DirectoryRoute = DirectoryRouteImport.update({
+  id: '/directory',
+  path: '/directory',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GovernanceRoute = GovernanceRouteImport.update({
+  id: '/governance',
+  path: '/governance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MarketplaceRoute = MarketplaceRouteImport.update({
+  id: '/marketplace',
+  path: '/marketplace',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MissionControlRoute = MissionControlRouteImport.update({
+  id: '/mission-control',
+  path: '/mission-control',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RoiRoute = RoiRouteImport.update({
+  id: '/roi',
+  path: '/roi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RoomsRoute = RoomsRouteImport.update({
+  id: '/rooms',
+  path: '/rooms',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/architecture': typeof ArchitectureRoute
+  '/directory': typeof DirectoryRoute
+  '/governance': typeof GovernanceRoute
+  '/marketplace': typeof MarketplaceRoute
+  '/mission-control': typeof MissionControlRoute
+  '/roi': typeof RoiRoute
+  '/rooms': typeof RoomsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/architecture': typeof ArchitectureRoute
+  '/directory': typeof DirectoryRoute
+  '/governance': typeof GovernanceRoute
+  '/marketplace': typeof MarketplaceRoute
+  '/mission-control': typeof MissionControlRoute
+  '/roi': typeof RoiRoute
+  '/rooms': typeof RoomsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/architecture': typeof ArchitectureRoute
+  '/directory': typeof DirectoryRoute
+  '/governance': typeof GovernanceRoute
+  '/marketplace': typeof MarketplaceRoute
+  '/mission-control': typeof MissionControlRoute
+  '/roi': typeof RoiRoute
+  '/rooms': typeof RoomsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/architecture'
+    | '/directory'
+    | '/governance'
+    | '/marketplace'
+    | '/mission-control'
+    | '/roi'
+    | '/rooms'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/architecture'
+    | '/directory'
+    | '/governance'
+    | '/marketplace'
+    | '/mission-control'
+    | '/roi'
+    | '/rooms'
+  id:
+    | '__root__'
+    | '/'
+    | '/architecture'
+    | '/directory'
+    | '/governance'
+    | '/marketplace'
+    | '/mission-control'
+    | '/roi'
+    | '/rooms'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ArchitectureRoute: typeof ArchitectureRoute
+  DirectoryRoute: typeof DirectoryRoute
+  GovernanceRoute: typeof GovernanceRoute
+  MarketplaceRoute: typeof MarketplaceRoute
+  MissionControlRoute: typeof MissionControlRoute
+  RoiRoute: typeof RoiRoute
+  RoomsRoute: typeof RoomsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,22 +143,68 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/architecture': {
+      id: '/architecture'
+      path: '/architecture'
+      fullPath: '/architecture'
+      preLoaderRoute: typeof ArchitectureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/directory': {
+      id: '/directory'
+      path: '/directory'
+      fullPath: '/directory'
+      preLoaderRoute: typeof DirectoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/governance': {
+      id: '/governance'
+      path: '/governance'
+      fullPath: '/governance'
+      preLoaderRoute: typeof GovernanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/marketplace': {
+      id: '/marketplace'
+      path: '/marketplace'
+      fullPath: '/marketplace'
+      preLoaderRoute: typeof MarketplaceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mission-control': {
+      id: '/mission-control'
+      path: '/mission-control'
+      fullPath: '/mission-control'
+      preLoaderRoute: typeof MissionControlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/roi': {
+      id: '/roi'
+      path: '/roi'
+      fullPath: '/roi'
+      preLoaderRoute: typeof RoiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rooms': {
+      id: '/rooms'
+      path: '/rooms'
+      fullPath: '/rooms'
+      preLoaderRoute: typeof RoomsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ArchitectureRoute: ArchitectureRoute,
+  DirectoryRoute: DirectoryRoute,
+  GovernanceRoute: GovernanceRoute,
+  MarketplaceRoute: MarketplaceRoute,
+  MissionControlRoute: MissionControlRoute,
+  RoiRoute: RoiRoute,
+  RoomsRoute: RoomsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
