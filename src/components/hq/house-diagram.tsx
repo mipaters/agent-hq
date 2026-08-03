@@ -1,6 +1,16 @@
+import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { ExternalLink } from "lucide-react";
-import { agentsByRoom, rooms, roomMetrics, roomPersonas } from "@/lib/hq-data";
+import { ExternalLink, Eye } from "lucide-react";
+import { agentsByRoom, rooms, roomMetrics, roomPersonas, type Agent } from "@/lib/hq-data";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+
 
 const platform = [
   "Microsoft Fabric",
