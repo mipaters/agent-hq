@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { rooms, roomMetrics, roomPersonas } from "@/lib/hq-data";
+import { ExternalLink } from "lucide-react";
+import { agentsByRoom, rooms, roomMetrics, roomPersonas } from "@/lib/hq-data";
 
 const platform = [
   "Microsoft Fabric",
@@ -111,6 +112,23 @@ export function HouseDiagram() {
             <p className="mt-1 text-xs text-muted-foreground sm:text-sm">
               Value, risk, adoption and cross-functional signals for the whole house
             </p>
+            <div className="mt-3 flex flex-wrap justify-center gap-2">
+              {agentsByRoom("executive").map((a) => (
+                <a
+                  key={a.id}
+                  href={a.url}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-medium transition-colors"
+                  style={{
+                    borderColor: "color-mix(in oklab, var(--ms-cyan) 55%, transparent)",
+                    background: "color-mix(in oklab, var(--ms-cyan) 16%, transparent)",
+                  }}
+                >
+                  {a.name} <ExternalLink className="size-3.5" />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 
