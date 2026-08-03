@@ -19,7 +19,7 @@ export const Route = createFileRoute("/rooms")({
       {
         property: "og:description",
         content:
-          "Eight rooms of specialized AI agents with business owners, outcomes, governance status and AI maturity scores.",
+          "Eight rooms of specialized AI agents with business owners, outcomes and governance status.",
       },
     ],
   }),
@@ -60,7 +60,6 @@ function RoomsPage() {
                     <div className="mt-3 flex flex-wrap gap-1.5">
                       <Chip tone="blue">{room.owner}</Chip>
                       <Chip tone="green">{room.governance}</Chip>
-                      <Chip tone="amber">AI maturity {room.maturity}</Chip>
                     </div>
                   </div>
                   <div className="w-full max-w-sm">
