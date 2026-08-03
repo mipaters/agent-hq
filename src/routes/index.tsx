@@ -58,9 +58,6 @@ function CommandCenter() {
               Enter the rooms <ArrowRight className="size-4" />
             </Link>
           </Button>
-          <Button asChild variant="secondary">
-            <Link to="/marketplace">Browse the AI Agent Marketplace</Link>
-          </Button>
           <CommonArchitectureButton variant="outline" />
         </div>
       </section>
