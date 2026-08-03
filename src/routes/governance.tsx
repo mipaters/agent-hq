@@ -30,7 +30,7 @@ function Governance() {
       <PageHeading
         eyebrow="Agent365 Governance"
         title="One control plane for the entire agent estate"
-        description="The marketplace helps teams discover agents. Agent365 makes sure the enterprise can prove who owns them, what data they touch, what they are allowed to do, and whether they still earn their place."
+        description="Agent365 makes sure the enterprise can prove who owns every agent, what data they touch, what they are allowed to do, and whether they still earn their place."
       />
 
       <div

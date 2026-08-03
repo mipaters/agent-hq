@@ -7,7 +7,6 @@ import { useWalkthrough } from "@/components/hq/walkthrough";
 const nav = [
   { to: "/", label: "Executive Command Center" },
   { to: "/rooms", label: "Rooms of the House" },
-  { to: "/marketplace", label: "AI Agent Marketplace" },
   { to: "/mission-control", label: "Cross-Agent Mission Control" },
   { to: "/governance", label: "Agent365 Governance" },
   { to: "/architecture", label: "Microsoft Architecture" },

@@ -1123,7 +1123,7 @@ export const governanceControls = [
 ];
 
 export const governanceStatement =
-  "Agent365 provides the enterprise control plane for agent inventory, ownership, policy, observability, certification, auditability, and lifecycle management. The marketplace helps teams discover agents. Agent365 helps the enterprise govern them.";
+  "Agent365 provides the enterprise control plane for agent inventory, ownership, policy, observability, certification, auditability, and lifecycle management. It helps the enterprise prove who owns each agent, what data they touch, what they are allowed to do, and whether they still earn their place.";
 
 export const architectureStatement =
   "Each agentic solution blueprint can be delivered as a Microsoft-native agent experience, while Power BI provides embedded analytics, KPI reporting, adoption tracking, and value realization. The HQ app creates a unified executive operating model across the whole blueprint portfolio.";
@@ -1145,9 +1145,9 @@ export const walkthroughSteps = [
     to: "/rooms",
   },
   {
-    title: "AI Agent Marketplace",
-    body: "The AI Agent Marketplace helps employees and leaders discover approved agents, understand business value, and request access.",
-    to: "/marketplace",
+    title: "Agent blueprint catalog",
+    body: "Browse the blueprint catalog to discover approved agents, understand business value, and request access to a pilot.",
+    to: "/directory",
   },
   {
     title: "Cross-Agent Mission Control",
