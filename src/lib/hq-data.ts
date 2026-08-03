@@ -611,7 +611,7 @@ export const agentById = (id: string) => agents.find((a) => a.id === id);
 export const agentByName = (name: string) => agents.find((a) => a.name === name)!;
 
 export const kpis = [
-  { label: "Total Published Agents", value: "17", sub: "Across 8 business functions", tone: "blue" },
+  { label: "Agent Blueprints", value: "17", sub: "Across 8 business functions", tone: "blue" },
   { label: "Business Functions Covered", value: "8", sub: "Network to Legal", tone: "teal" },
   { label: "Annual Value Potential", value: "$186M", sub: "Validated business case", tone: "green" },
   {
@@ -638,7 +638,7 @@ export const priorityAreas = [
 ];
 
 export const heroMessage =
-  "Agentic Telecom & Media Company HQ brings together specialized AI agents across network operations, IT, finance, HR, media, consumer, business, and legal functions into one governed enterprise operating model. Each room contains purpose-built agents, while the command center gives executives a unified view of business value, risk, adoption, and cross-functional opportunity.";
+  "Agentic Telecom & Media Company HQ brings together agent blueprints across network operations, IT, finance, HR, media, consumer, business, and legal functions into one governed enterprise operating model. Each room shows what can be built hand in hand with Microsoft Frontier Company FDE and Industry teams alongside your own engineering, data and business resources, while the command center gives executives a unified view of business value, risk, adoption, and cross-functional opportunity.";
 
 export const collections = [
   {
@@ -1083,7 +1083,7 @@ export const governanceStatement =
   "Agent365 provides the enterprise control plane for agent inventory, ownership, policy, observability, certification, auditability, and lifecycle management. The marketplace helps teams discover agents. Agent365 helps the enterprise govern them.";
 
 export const architectureStatement =
-  "Each individual agentic solution can be delivered as a Microsoft-native agent experience, while Power BI provides embedded analytics, KPI reporting, adoption tracking, and value realization. The HQ app creates a unified executive operating model across all published agents.";
+  "Each agentic solution blueprint can be delivered as a Microsoft-native agent experience, while Power BI provides embedded analytics, KPI reporting, adoption tracking, and value realization. The HQ app creates a unified executive operating model across the whole blueprint portfolio.";
 
 export const walkthroughSteps = [
   {
@@ -1098,7 +1098,7 @@ export const walkthroughSteps = [
   },
   {
     title: "Specialized agents",
-    body: "Each room contains specialized agents already published and available to launch.",
+    body: "Each room holds blueprints for specialized agents your teams can build with Microsoft Frontier Company FDE and Industry support — every one is demonstrable today.",
     to: "/rooms",
   },
   {

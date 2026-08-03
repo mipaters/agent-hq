@@ -11,12 +11,12 @@ export const Route = createFileRoute("/directory")({
       {
         name: "description",
         content:
-          "A clean launch directory of every published agent demo, grouped by business function, opening in a new tab.",
+          "A clean launch directory of every agent blueprint demo, grouped by business function, opening in a new tab.",
       },
       { property: "og:title", content: "Agent Launch Directory" },
       {
         property: "og:description",
-        content: "Launch any published agentic solution demo directly from the executive HQ.",
+        content: "Launch any agentic solution blueprint demo directly from the executive HQ.",
       },
     ],
   }),
@@ -28,7 +28,7 @@ function Directory() {
     <div className="space-y-6">
       <PageHeading
         eyebrow="Agent Launch Directory"
-        title="Every published demo, one click away"
+        title="Every blueprint demo, one click away"
         description="Each agent opens in a new browser tab so the underlying experience can be demonstrated in full detail."
       />
 

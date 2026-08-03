@@ -89,7 +89,7 @@ function Marketplace() {
       <PageHeading
         eyebrow="AI Agent Marketplace"
         title="Discover, evaluate and launch approved enterprise agents"
-        description="A catalog of every published agent with business value, risk posture, governance status and adoption — organized by function and packaged into executive suites."
+        description="A catalog of agent blueprints with business value, risk posture, governance status and adoption — organized by function and packaged into executive suites, ready to be built with Microsoft Frontier Company FDE and Industry teams."
       />
 
       <section className="grid gap-4 lg:grid-cols-5">

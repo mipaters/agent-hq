@@ -133,7 +133,7 @@ export function AgentCard({ agent, compact = false }: { agent: Agent; compact?: 
           <DialogHeader>
             <DialogTitle>Preview in Hub — {agent.name}</DialogTitle>
             <DialogDescription>
-              Optional embedded preview. Some published demos block embedding; if the frame stays
+              Optional embedded preview. Some blueprint demos block embedding; if the frame stays
               blank, launch the demo in a new tab.
             </DialogDescription>
           </DialogHeader>
