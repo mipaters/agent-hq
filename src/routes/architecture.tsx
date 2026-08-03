@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { CommonArchitectureButton } from "@/components/hq/common-architecture";
 import { PageHeading } from "@/components/hq/shell";
 import { architectureLayers, architectureStatement } from "@/lib/hq-data";
 
@@ -30,6 +31,10 @@ function Architecture() {
         title="A Microsoft-native reference architecture for the agent estate"
         description="Every agent in the house can be delivered as a Microsoft-native experience — grounded in enterprise data, governed by Entra, Purview and Agent365, and measured in Power BI."
       />
+
+      <div className="mb-6">
+        <CommonArchitectureButton />
+      </div>
 
       <div className="space-y-3">
         {architectureLayers.map((layer, i) => (
