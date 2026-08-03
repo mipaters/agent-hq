@@ -6,7 +6,8 @@ export type RoomId =
   | "consumer"
   | "business"
   | "finance"
-  | "legal";
+  | "legal"
+  | "executive";
 
 export type Agent = {
   id: string;
@@ -190,6 +191,24 @@ export const rooms: Room[] = [
     governance: "Legal review required",
     maturity: 65,
     accent: "var(--ms-red)",
+  },
+  {
+    id: "executive",
+    name: "Executive Mission Control",
+    short: "Executive Mission Control",
+    persona: "CEO, COO, CFO, Chief AI Officer, Executive Leadership Team",
+    owner: "CEO / Executive Leadership Team",
+    outcomes: [
+      "One enterprise view of agent value",
+      "Faster executive decisions",
+      "Cross-functional signal awareness",
+      "Portfolio prioritization",
+      "Governance and risk visibility",
+      "Value realization tracking",
+    ],
+    governance: "Certified, executive-owned",
+    maturity: 84,
+    accent: "var(--ms-cyan)",
   },
 ];
 
@@ -603,6 +622,30 @@ export const agents: Agent[] = [
     pattern: "Agent365 telemetry + Fabric + Power BI",
     status: "Live",
     url: "https://vital-copilot.lovable.app/",
+  },
+  {
+    id: "executive-copilot",
+    name: "Executive Copilot",
+    room: "executive",
+    functionLabel: "Executive",
+    persona: "CEO / Executive Leadership Team",
+    description:
+      "Executive-level copilot at the top of the house that synthesizes signals from every room into a single narrative on performance, value, risk and the decisions leadership needs to make next.",
+    outcome: "A unified executive view of enterprise performance, agent value and next-best decisions.",
+    roiCategory: "Productivity",
+    risk: "Medium",
+    dataSensitivity: "Confidential",
+    approvedActions: "Aggregate cross-room signals, draft executive briefings and decision options",
+    humanApproval: "Required for executive decisions and communications",
+    certification: "Certified",
+    governance: "Certified",
+    adoption: 81,
+    usage: 76,
+    roiScore: 92,
+    maturity: "Scaling",
+    pattern: "Azure AI Foundry + Fabric + Power BI + Agent365 telemetry",
+    status: "Live",
+    url: "https://executive-copilot-core.lovable.app",
   },
 ];
 
@@ -1182,6 +1225,11 @@ export const roomPersonas: Record<RoomId, RoomPersona[]> = {
     { role: "Compliance Leader", title: "Obligation tracking and readiness" },
     { role: "Procurement Leader", title: "Vendor governance and cycle time" },
   ],
+  executive: [
+    { role: "CEO", title: "Enterprise performance and strategy" },
+    { role: "COO", title: "Operational execution across the house" },
+    { role: "Chief AI Officer", title: "Agent portfolio value and governance" },
+  ],
 };
 
 export const roomMetrics: Record<RoomId, RoomMetric[]> = {
@@ -1224,5 +1272,10 @@ export const roomMetrics: Record<RoomId, RoomMetric[]> = {
     { label: "Contract review time", value: "-58%" },
     { label: "Obligations tracked", value: "12.4K" },
     { label: "Compliance findings", value: "-33%" },
+  ],
+  executive: [
+    { label: "Decision cycle time", value: "-42%" },
+    { label: "Value realized", value: "$186M" },
+    { label: "Portfolio adoption", value: "78%" },
   ],
 };
