@@ -114,21 +114,33 @@ export function HouseDiagram() {
             </p>
             <div className="mt-3 flex flex-wrap justify-center gap-2">
               {agentsByRoom("executive").map((a) => (
-                <a
-                  key={a.id}
-                  href={a.url}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-medium transition-colors"
-                  style={{
-                    borderColor: "color-mix(in oklab, var(--ms-cyan) 55%, transparent)",
-                    background: "color-mix(in oklab, var(--ms-cyan) 16%, transparent)",
-                  }}
-                >
-                  {a.name} <ExternalLink className="size-3.5" />
-                </a>
+                <div key={a.id} className="flex flex-wrap justify-center gap-2">
+                  <a
+                    href={a.url}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-medium transition-colors"
+                    style={{
+                      borderColor: "color-mix(in oklab, var(--ms-cyan) 55%, transparent)",
+                      background: "color-mix(in oklab, var(--ms-cyan) 16%, transparent)",
+                    }}
+                  >
+                    {a.name} <ExternalLink className="size-3.5" />
+                  </a>
+                  <button
+                    type="button"
+                    onClick={() => setPreviewAgent(a)}
+                    className="inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-medium transition-colors hover:bg-secondary"
+                    style={{
+                      borderColor: "color-mix(in oklab, var(--ms-cyan) 35%, transparent)",
+                    }}
+                  >
+                    <Eye className="size-3.5" /> Preview in Hub
+                  </button>
+                </div>
               ))}
             </div>
+
           </div>
         </div>
 
