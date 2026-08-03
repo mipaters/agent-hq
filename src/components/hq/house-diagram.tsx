@@ -216,6 +216,34 @@ export function HouseDiagram() {
           ))}
         </div>
       </div>
+
+      <Dialog open={!!previewAgent} onOpenChange={(o) => !o && setPreviewAgent(null)}>
+        <DialogContent className="max-w-5xl">
+          <DialogHeader>
+            <DialogTitle>Preview in Hub — {previewAgent?.name}</DialogTitle>
+            <DialogDescription>
+              Optional embedded preview. Some blueprint demos block embedding; if the frame stays
+              blank, launch the demo in a new tab.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="h-[60vh] overflow-hidden rounded-xl border bg-secondary/50">
+            {previewAgent && (
+              <iframe
+                src={previewAgent.url}
+                title={previewAgent.name}
+                className="h-full w-full"
+                sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+              />
+            )}
+          </div>
+          <Button asChild variant="secondary">
+            <a href={previewAgent?.url} target="_blank" rel="noreferrer noopener">
+              Open in new tab instead <ExternalLink className="size-4" />
+            </a>
+          </Button>
+        </DialogContent>
+      </Dialog>
+
     </div>
   );
 }
