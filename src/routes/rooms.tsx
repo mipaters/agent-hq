@@ -38,7 +38,9 @@ function RoomsPage() {
       />
 
       <div className="space-y-4">
-        {rooms.map((room) => {
+        {rooms
+          .filter((room) => room.id !== "executive")
+          .map((room) => {
           const roomAgents = agentsByRoom(room.id);
           const expanded = open === room.id;
           return (
