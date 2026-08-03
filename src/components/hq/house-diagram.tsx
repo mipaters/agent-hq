@@ -91,7 +91,9 @@ function RoomCell({ id }: { id: string }) {
 }
 
 export function HouseDiagram() {
+  const [previewAgent, setPreviewAgent] = useState<Agent | null>(null);
   return (
+
     <div className="panel grid-lines relative overflow-hidden p-4 sm:p-7">
       <div className="relative mx-auto max-w-5xl">
         {/* Roof */}
