@@ -18,7 +18,6 @@ const nav = [
 const badges = [
   { label: "Microsoft-powered agent ecosystem", tone: "blue" },
   { label: "Governed by Agent365", tone: "green" },
-  { label: "Enterprise AI Agent Marketplace blueprint", tone: "amber" },
 ];
 
 export function Shell({ children }: { children: React.ReactNode }) {
