@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { HouseDiagram } from "@/components/hq/house-diagram";
 import { Button } from "@/components/ui/button";
-import { heroMessage, kpis, priorityAreas, rooms, valueDimensions } from "@/lib/hq-data";
+import { heroMessage, priorityAreas } from "@/lib/hq-data";
 
 export const Route = createFileRoute("/")({
   head: () => ({

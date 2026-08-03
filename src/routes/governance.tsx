@@ -58,7 +58,7 @@ function Governance() {
         <div className="border-b p-5">
           <h3 className="text-lg font-semibold">Agent registry</h3>
           <p className="text-sm text-muted-foreground">
-            All {agents.length} registered agents with policy, risk and value posture.
+            All {agents.length} registered agentic solutions with policy, risk and value posture.
           </p>
         </div>
         <div className="overflow-x-auto">
