@@ -13,7 +13,6 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ArchitectureRouteImport } from './routes/architecture'
 import { Route as DirectoryRouteImport } from './routes/directory'
 import { Route as GovernanceRouteImport } from './routes/governance'
-import { Route as MarketplaceRouteImport } from './routes/marketplace'
 import { Route as MissionControlRouteImport } from './routes/mission-control'
 import { Route as RoiRouteImport } from './routes/roi'
 import { Route as RoomsRouteImport } from './routes/rooms'
@@ -38,11 +37,6 @@ const GovernanceRoute = GovernanceRouteImport.update({
   path: '/governance',
   getParentRoute: () => rootRouteImport,
 } as any)
-const MarketplaceRoute = MarketplaceRouteImport.update({
-  id: '/marketplace',
-  path: '/marketplace',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const MissionControlRoute = MissionControlRouteImport.update({
   id: '/mission-control',
   path: '/mission-control',
@@ -64,7 +58,6 @@ export interface FileRoutesByFullPath {
   '/architecture': typeof ArchitectureRoute
   '/directory': typeof DirectoryRoute
   '/governance': typeof GovernanceRoute
-  '/marketplace': typeof MarketplaceRoute
   '/mission-control': typeof MissionControlRoute
   '/roi': typeof RoiRoute
   '/rooms': typeof RoomsRoute
@@ -74,7 +67,6 @@ export interface FileRoutesByTo {
   '/architecture': typeof ArchitectureRoute
   '/directory': typeof DirectoryRoute
   '/governance': typeof GovernanceRoute
-  '/marketplace': typeof MarketplaceRoute
   '/mission-control': typeof MissionControlRoute
   '/roi': typeof RoiRoute
   '/rooms': typeof RoomsRoute
@@ -85,7 +77,6 @@ export interface FileRoutesById {
   '/architecture': typeof ArchitectureRoute
   '/directory': typeof DirectoryRoute
   '/governance': typeof GovernanceRoute
-  '/marketplace': typeof MarketplaceRoute
   '/mission-control': typeof MissionControlRoute
   '/roi': typeof RoiRoute
   '/rooms': typeof RoomsRoute
@@ -97,7 +88,6 @@ export interface FileRouteTypes {
     | '/architecture'
     | '/directory'
     | '/governance'
-    | '/marketplace'
     | '/mission-control'
     | '/roi'
     | '/rooms'
@@ -107,7 +97,6 @@ export interface FileRouteTypes {
     | '/architecture'
     | '/directory'
     | '/governance'
-    | '/marketplace'
     | '/mission-control'
     | '/roi'
     | '/rooms'
@@ -117,7 +106,6 @@ export interface FileRouteTypes {
     | '/architecture'
     | '/directory'
     | '/governance'
-    | '/marketplace'
     | '/mission-control'
     | '/roi'
     | '/rooms'
@@ -128,7 +116,6 @@ export interface RootRouteChildren {
   ArchitectureRoute: typeof ArchitectureRoute
   DirectoryRoute: typeof DirectoryRoute
   GovernanceRoute: typeof GovernanceRoute
-  MarketplaceRoute: typeof MarketplaceRoute
   MissionControlRoute: typeof MissionControlRoute
   RoiRoute: typeof RoiRoute
   RoomsRoute: typeof RoomsRoute
@@ -164,13 +151,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GovernanceRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/marketplace': {
-      id: '/marketplace'
-      path: '/marketplace'
-      fullPath: '/marketplace'
-      preLoaderRoute: typeof MarketplaceRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/mission-control': {
       id: '/mission-control'
       path: '/mission-control'
@@ -200,7 +180,6 @@ const rootRouteChildren: RootRouteChildren = {
   ArchitectureRoute: ArchitectureRoute,
   DirectoryRoute: DirectoryRoute,
   GovernanceRoute: GovernanceRoute,
-  MarketplaceRoute: MarketplaceRoute,
   MissionControlRoute: MissionControlRoute,
   RoiRoute: RoiRoute,
   RoomsRoute: RoomsRoute,
