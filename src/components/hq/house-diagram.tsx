@@ -1,6 +1,16 @@
+import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { ExternalLink } from "lucide-react";
-import { agentsByRoom, rooms, roomMetrics, roomPersonas } from "@/lib/hq-data";
+import { ExternalLink, Eye } from "lucide-react";
+import { agentsByRoom, rooms, roomMetrics, roomPersonas, type Agent } from "@/lib/hq-data";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+
 
 const platform = [
   "Microsoft Fabric",
@@ -81,7 +91,9 @@ function RoomCell({ id }: { id: string }) {
 }
 
 export function HouseDiagram() {
+  const [previewAgent, setPreviewAgent] = useState<Agent | null>(null);
   return (
+
     <div className="panel grid-lines relative overflow-hidden p-4 sm:p-7">
       <div className="relative mx-auto max-w-5xl">
         {/* Roof */}
@@ -114,21 +126,33 @@ export function HouseDiagram() {
             </p>
             <div className="mt-3 flex flex-wrap justify-center gap-2">
               {agentsByRoom("executive").map((a) => (
-                <a
-                  key={a.id}
-                  href={a.url}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-medium transition-colors"
-                  style={{
-                    borderColor: "color-mix(in oklab, var(--ms-cyan) 55%, transparent)",
-                    background: "color-mix(in oklab, var(--ms-cyan) 16%, transparent)",
-                  }}
-                >
-                  {a.name} <ExternalLink className="size-3.5" />
-                </a>
+                <div key={a.id} className="flex flex-wrap justify-center gap-2">
+                  <a
+                    href={a.url}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-medium transition-colors"
+                    style={{
+                      borderColor: "color-mix(in oklab, var(--ms-cyan) 55%, transparent)",
+                      background: "color-mix(in oklab, var(--ms-cyan) 16%, transparent)",
+                    }}
+                  >
+                    {a.name} <ExternalLink className="size-3.5" />
+                  </a>
+                  <button
+                    type="button"
+                    onClick={() => setPreviewAgent(a)}
+                    className="inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-medium transition-colors hover:bg-secondary"
+                    style={{
+                      borderColor: "color-mix(in oklab, var(--ms-cyan) 35%, transparent)",
+                    }}
+                  >
+                    <Eye className="size-3.5" /> Preview in Hub
+                  </button>
+                </div>
               ))}
             </div>
+
           </div>
         </div>
 
@@ -192,6 +216,34 @@ export function HouseDiagram() {
           ))}
         </div>
       </div>
+
+      <Dialog open={!!previewAgent} onOpenChange={(o) => !o && setPreviewAgent(null)}>
+        <DialogContent className="max-w-5xl">
+          <DialogHeader>
+            <DialogTitle>Preview in Hub — {previewAgent?.name}</DialogTitle>
+            <DialogDescription>
+              Optional embedded preview. Some blueprint demos block embedding; if the frame stays
+              blank, launch the demo in a new tab.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="h-[60vh] overflow-hidden rounded-xl border bg-secondary/50">
+            {previewAgent && (
+              <iframe
+                src={previewAgent.url}
+                title={previewAgent.name}
+                className="h-full w-full"
+                sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+              />
+            )}
+          </div>
+          <Button asChild variant="secondary">
+            <a href={previewAgent?.url} target="_blank" rel="noreferrer noopener">
+              Open in new tab instead <ExternalLink className="size-4" />
+            </a>
+          </Button>
+        </DialogContent>
+      </Dialog>
+
     </div>
   );
 }
