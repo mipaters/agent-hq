@@ -38,8 +38,8 @@ export function WalkthroughProvider({ children }: { children: ReactNode }) {
                     Executive walkthrough · Step {step + 1} of {walkthroughSteps.length}
                   </span>
                 </div>
-                <h3 className="mt-1 text-lg font-semibold">{walkthroughSteps[step].title}</h3>
-                <p className="mt-1 text-sm text-muted-foreground">{walkthroughSteps[step].body}</p>
+                <h3 className="mt-1 text-lg font-semibold">{walkthroughSteps[step]?.title}</h3>
+                <p className="mt-1 text-sm text-muted-foreground">{walkthroughSteps[step]?.body}</p>
                 <div className="mt-4 flex flex-wrap items-center gap-2">
                   <Button
                     variant="secondary"
