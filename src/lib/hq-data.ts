@@ -1169,9 +1169,9 @@ export const walkthroughSteps = [
     to: "/rooms",
   },
   {
-    title: "Agent blueprint catalog",
-    body: "Browse the blueprint catalog to discover approved agents, understand business value, and request access to a pilot.",
-    to: "/directory",
+    title: "AI Agent Marketplace",
+    body: "The AI Agent Marketplace helps employees and leaders discover approved agent blueprints, understand business value, and request access.",
+    to: "/marketplace",
   },
   {
     title: "Cross-Agent Mission Control",
