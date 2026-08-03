@@ -1137,3 +1137,92 @@ export const walkthroughSteps = [
     to: "/",
   },
 ];
+
+export type RoomPersona = { role: string; title: string };
+export type RoomMetric = { label: string; value: string };
+
+export const roomPersonas: Record<RoomId, RoomPersona[]> = {
+  network: [
+    { role: "CTO", title: "Owns network reliability commitments" },
+    { role: "NOC Leader", title: "Runs 24/7 incident response" },
+    { role: "Field Operations Leader", title: "Dispatch and truck-roll efficiency" },
+  ],
+  it: [
+    { role: "CIO", title: "Enterprise technology productivity" },
+    { role: "VP IT Operations", title: "Service reliability and change quality" },
+    { role: "Service Desk Leader", title: "Employee support experience" },
+  ],
+  media: [
+    { role: "Media Executive", title: "Content and rights monetization" },
+    { role: "Venue Revenue Leader", title: "Event-day revenue per fan" },
+    { role: "Sponsorship Leader", title: "Partner yield and renewals" },
+  ],
+  hr: [
+    { role: "CHRO", title: "Workforce capability and experience" },
+    { role: "Talent Acquisition Leader", title: "Speed and cost of hiring" },
+    { role: "Workforce Planning Leader", title: "Skills supply and internal mobility" },
+  ],
+  consumer: [
+    { role: "Consumer Business Leader", title: "Subscriber growth and value" },
+    { role: "CMO", title: "Personalized offers and campaigns" },
+    { role: "Chief Customer Officer", title: "Retention and care experience" },
+  ],
+  business: [
+    { role: "B2B Sales Leader", title: "Pipeline and conversion" },
+    { role: "SMB Sales Leader", title: "Inside-sales productivity" },
+    { role: "Commercial Operations Leader", title: "Quote-to-close velocity" },
+  ],
+  finance: [
+    { role: "CFO", title: "EBITDA protection and controls" },
+    { role: "Revenue Assurance Leader", title: "Leakage detection and recovery" },
+    { role: "FP&A Leader", title: "Forecast accuracy" },
+  ],
+  legal: [
+    { role: "General Counsel", title: "Regulatory and contractual risk" },
+    { role: "Compliance Leader", title: "Obligation tracking and readiness" },
+    { role: "Procurement Leader", title: "Vendor governance and cycle time" },
+  ],
+};
+
+export const roomMetrics: Record<RoomId, RoomMetric[]> = {
+  network: [
+    { label: "MTTR", value: "-34%" },
+    { label: "Repeat escalations", value: "-27%" },
+    { label: "Network availability", value: "99.98%" },
+  ],
+  it: [
+    { label: "Ticket deflection", value: "41%" },
+    { label: "Cloud spend variance", value: "-19%" },
+    { label: "Change failure rate", value: "-23%" },
+  ],
+  media: [
+    { label: "Sponsorship yield", value: "+18%" },
+    { label: "Revenue per fan", value: "+$11.40" },
+    { label: "Rights utilization", value: "87%" },
+  ],
+  hr: [
+    { label: "Time to hire", value: "-22 days" },
+    { label: "Cost per hire", value: "-16%" },
+    { label: "Internal fill rate", value: "38%" },
+  ],
+  consumer: [
+    { label: "Churn", value: "-2.1 pts" },
+    { label: "Mobile attach", value: "+14%" },
+    { label: "Offer acceptance", value: "+9 pts" },
+  ],
+  business: [
+    { label: "SMB conversion", value: "+21%" },
+    { label: "Quote-to-close", value: "-31%" },
+    { label: "Seller selling time", value: "+7 hrs/wk" },
+  ],
+  finance: [
+    { label: "Leakage recovered", value: "$24M" },
+    { label: "Billing accuracy", value: "99.4%" },
+    { label: "Days sales outstanding", value: "-6 days" },
+  ],
+  legal: [
+    { label: "Contract review time", value: "-58%" },
+    { label: "Obligations tracked", value: "12.4K" },
+    { label: "Compliance findings", value: "-33%" },
+  ],
+};

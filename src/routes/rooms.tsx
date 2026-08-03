@@ -58,7 +58,7 @@ function RoomsPage() {
                     <h3 className="text-xl font-semibold">{room.name}</h3>
                     <p className="mt-1 text-sm text-muted-foreground">{room.persona}</p>
                     <div className="mt-3 flex flex-wrap gap-1.5">
-                      <Chip tone="blue">{roomAgents.length} agents</Chip>
+                      <Chip tone="blue">{room.owner}</Chip>
                       <Chip tone="green">{room.governance}</Chip>
                       <Chip tone="amber">AI maturity {room.maturity}</Chip>
                     </div>
