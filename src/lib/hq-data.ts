@@ -7,6 +7,8 @@ export type RoomId =
   | "business"
   | "finance"
   | "legal"
+  | "security"
+  | "support"
   | "executive";
 
 export type Agent = {
