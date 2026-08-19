@@ -1187,6 +1187,18 @@ export const roiRows = [
     value: 8,
     owner: "General Counsel / Procurement Leader",
   },
+  {
+    room: "Corporate Security",
+    lever: "Threat detection, incident response, fraud prevention",
+    value: 16,
+    owner: "Chief Security Officer",
+  },
+  {
+    room: "Customer Support",
+    lever: "Handle time reduction and first-contact resolution",
+    value: 28,
+    owner: "Chief Customer Officer",
+  },
 ];
 
 export const valueDimensions = [
