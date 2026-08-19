@@ -1407,6 +1407,16 @@ export const roomPersonas: Record<RoomId, RoomPersona[]> = {
     { role: "Compliance Leader", title: "Obligation tracking and readiness" },
     { role: "Procurement Leader", title: "Vendor governance and cycle time" },
   ],
+  security: [
+    { role: "Chief Security Officer", title: "Enterprise security posture and risk" },
+    { role: "Cybersecurity Leader", title: "Threat detection and incident response" },
+    { role: "Fraud Operations Leader", title: "Fraud prevention and investigation" },
+  ],
+  support: [
+    { role: "Chief Customer Officer", title: "Customer experience and retention" },
+    { role: "Contact Center Leader", title: "First-contact resolution and handle time" },
+    { role: "Field Service Leader", title: "Truck-roll and service efficiency" },
+  ],
   executive: [
     { role: "CEO", title: "Enterprise performance and strategy" },
     { role: "COO", title: "Operational execution across the house" },
