@@ -1287,6 +1287,16 @@ export const roomPersonas: Record<RoomId, RoomPersona[]> = {
     { role: "Compliance Leader", title: "Obligation tracking and readiness" },
     { role: "Procurement Leader", title: "Vendor governance and cycle time" },
   ],
+  security: [
+    { role: "CISO", title: "Enterprise threat and risk posture" },
+    { role: "SOC Leader", title: "Detection, triage and response" },
+    { role: "Corporate Security Leader", title: "Physical and insider risk" },
+  ],
+  support: [
+    { role: "Chief Customer Officer", title: "End-to-end support experience" },
+    { role: "Care Operations Leader", title: "Handle time and resolution quality" },
+    { role: "Digital Support Leader", title: "Self-serve and assisted channels" },
+  ],
   executive: [
     { role: "CEO", title: "Enterprise performance and strategy" },
     { role: "COO", title: "Operational execution across the house" },
@@ -1334,6 +1344,16 @@ export const roomMetrics: Record<RoomId, RoomMetric[]> = {
     { label: "Contract review time", value: "-58%" },
     { label: "Obligations tracked", value: "12.4K" },
     { label: "Compliance findings", value: "-33%" },
+  ],
+  security: [
+    { label: "Mean time to detect", value: "-46%" },
+    { label: "Investigation effort", value: "-38%" },
+    { label: "Critical incidents", value: "-21%" },
+  ],
+  support: [
+    { label: "First-contact resolution", value: "+17 pts" },
+    { label: "Average handle time", value: "-29%" },
+    { label: "CSAT", value: "+11 pts" },
   ],
   executive: [
     { label: "Decision cycle time", value: "-42%" },
