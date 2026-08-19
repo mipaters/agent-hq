@@ -1465,6 +1465,16 @@ export const roomMetrics: Record<RoomId, RoomMetric[]> = {
     { label: "Obligations tracked", value: "12.4K" },
     { label: "Compliance findings", value: "-33%" },
   ],
+  security: [
+    { label: "Mean time to detect", value: "-44%" },
+    { label: "Incident response time", value: "-37%" },
+    { label: "Fraud cases prevented", value: "8.2K" },
+  ],
+  support: [
+    { label: "First-contact resolution", value: "+18 pts" },
+    { label: "Average handle time", value: "-24%" },
+    { label: "Customer satisfaction", value: "+11 pts" },
+  ],
   executive: [
     { label: "Decision cycle time", value: "-42%" },
     { label: "Value realized", value: "$186M" },
