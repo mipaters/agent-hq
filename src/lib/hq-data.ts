@@ -1318,7 +1318,7 @@ export const walkthroughSteps = [
   },
   {
     title: "Rooms of the house",
-    body: "Each room represents a major business function: Network, IT, Media, HR, Consumer, Business, Finance, and Legal.",
+    body: "Each room represents a major business function: Network, IT, Media, HR, Consumer, Business, Finance, Legal, Corporate Security, and Customer Support.",
     to: "/rooms",
   },
   {
