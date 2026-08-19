@@ -12,7 +12,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Executive command center for a governed portfolio of 17 AI agents across network, IT, media, HR, consumer, business, finance and legal functions.",
+          "Executive command center for a governed portfolio of 22 AI agents across network, IT, media, HR, consumer, business, finance, legal, security and support functions.",
       },
       { property: "og:title", content: "Agentic Telecom & Media Company HQ" },
       {
