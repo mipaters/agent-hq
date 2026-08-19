@@ -7,6 +7,8 @@ export type RoomId =
   | "business"
   | "finance"
   | "legal"
+  | "security"
+  | "support"
   | "executive";
 
 export type Agent = {
@@ -191,6 +193,42 @@ export const rooms: Room[] = [
     governance: "Legal review required",
     maturity: 65,
     accent: "var(--ms-red)",
+  },
+  {
+    id: "security",
+    name: "Corporate Security Agentic Solutions",
+    short: "Corporate Security Room",
+    persona: "CISO, SOC Leader, Corporate Security Leader, Fraud & Risk Leader",
+    owner: "CISO",
+    outcomes: [
+      "Faster threat detection",
+      "Lower incident dwell time",
+      "Automated investigation summaries",
+      "Reduced analyst fatigue",
+      "Stronger insider-risk posture",
+      "Improved regulatory evidence",
+    ],
+    governance: "Certified, security-owned",
+    maturity: 76,
+    accent: "var(--ms-red)",
+  },
+  {
+    id: "support",
+    name: "Customer Support Agentic Solutions",
+    short: "Customer Support Room",
+    persona: "Chief Customer Officer, Care Operations Leader, Contact Center Leader, Digital Support Leader",
+    owner: "Care Operations Leader",
+    outcomes: [
+      "Faster first-contact resolution",
+      "Lower average handle time",
+      "Higher CSAT and NPS",
+      "Reduced repeat contacts",
+      "Better agent assist quality",
+      "Improved technical support accuracy",
+    ],
+    governance: "Certified, care-owned",
+    maturity: 79,
+    accent: "var(--ms-teal)",
   },
   {
     id: "executive",
