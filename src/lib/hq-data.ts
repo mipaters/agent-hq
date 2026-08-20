@@ -836,8 +836,8 @@ export const agentById = (id: string) => agents.find((a) => a.id === id);
 export const agentByName = (name: string) => agents.find((a) => a.name === name)!;
 
 export const kpis = [
-  { label: "Agent Blueprints", value: "17", sub: "Across 8 business functions", tone: "blue" },
-  { label: "Business Functions Covered", value: "8", sub: "Network to Legal", tone: "teal" },
+  { label: "Agent Blueprints", value: "22", sub: "Across 10 business functions", tone: "blue" },
+  { label: "Business Functions Covered", value: "10", sub: "Network to Customer Support", tone: "teal" },
   { label: "Annual Value Potential", value: "$186M", sub: "Validated business case", tone: "green" },
   {
     label: "Productivity Hours Recovered",
@@ -1181,6 +1181,8 @@ export const roiRows = [
   },
   { room: "Business", lever: "SMB sales productivity and pipeline growth", value: 14, owner: "B2B Sales Leader" },
   { room: "Finance", lever: "Revenue assurance and leakage recovery", value: 22, owner: "CFO" },
+  { room: "Corporate Security", lever: "Threat detection and investigation productivity", value: 18, owner: "CISO" },
+  { room: "Customer Support", lever: "Handle time, resolution quality and deflection", value: 26, owner: "Care Operations Leader" },
   {
     room: "Legal / Procurement",
     lever: "Compliance risk and contract productivity",
@@ -1287,12 +1289,12 @@ export const architectureLayers = [
 ];
 
 export const governanceControls = [
-  { name: "Agent registry", detail: "17 registered agents, single source of truth", tone: "blue" },
+  { name: "Agent registry", detail: "22 registered agents, single source of truth", tone: "blue" },
   { name: "Agent owner", detail: "Named technical owner for every agent", tone: "blue" },
   { name: "Business sponsor", detail: "Executive sponsor accountable for value", tone: "teal" },
   { name: "Approved data sources", detail: "Purview-labelled sources per agent", tone: "teal" },
   { name: "Approved actions", detail: "Explicit action scopes, deny by default", tone: "cyan" },
-  { name: "Human approval requirements", detail: "12 of 17 agents gated on human approval", tone: "amber" },
+  { name: "Human approval requirements", detail: "17 of 22 agents gated on human approval", tone: "amber" },
   { name: "Risk classification", detail: "5 high, 9 medium, 3 low-medium", tone: "red" },
   { name: "Certification status", detail: "11 certified, 4 production candidates, 2 in review", tone: "green" },
   { name: "Usage analytics", detail: "Daily active usage and task success telemetry", tone: "blue" },
