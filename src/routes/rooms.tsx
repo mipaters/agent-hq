@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { PageHeading } from "@/components/hq/shell";
 import { AgentCard, Chip } from "@/components/hq/agent-card";
 import { Button } from "@/components/ui/button";
-import { agentsByRoom, rooms } from "@/lib/hq-data";
+import { agentsByRoom, roomMetrics, roomValueM, rooms, type Room } from "@/lib/hq-data";
 
 export const Route = createFileRoute("/rooms")({
   head: () => ({
@@ -26,8 +26,74 @@ export const Route = createFileRoute("/rooms")({
   component: RoomsPage,
 });
 
+function RoomKpis({ room }: { room: Room }) {
+  const roomAgents = agentsByRoom(room.id);
+  const certified = roomAgents.filter((a) => a.governance === "Certified").length;
+  const avg = (key: "adoption" | "roiScore") =>
+    Math.round(roomAgents.reduce((sum, a) => sum + a[key], 0) / Math.max(roomAgents.length, 1));
+  const gated = roomAgents.filter((a) => a.humanApproval.toLowerCase().startsWith("required")).length;
+
+  const kpis: { label: string; value: string; sub: string }[] = [
+    {
+      label: "Annual value potential",
+      value: `$${roomValueM[room.id]}M`,
+      sub: `${room.owner} accountable`,
+    },
+    {
+      label: "Agent coverage",
+      value: `${roomAgents.length} agents`,
+      sub: `${new Set(roomAgents.map((a) => a.roiCategory)).size} value levers covered`,
+    },
+    {
+      label: "Governance status",
+      value: `${certified}/${roomAgents.length} certified`,
+      sub: `${gated} gated on human approval`,
+    },
+    {
+      label: "Adoption / ROI score",
+      value: `${avg("adoption")}% · ${avg("roiScore")}%`,
+      sub: `AI maturity ${room.maturity}%`,
+    },
+  ];
+
+  return (
+    <div className="animate-rise-in mt-6">
+      <p className="text-xs tracking-wide text-muted-foreground uppercase">Executive KPIs</p>
+      <div className="mt-2 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+        {kpis.map((k) => (
+          <div key={k.label} className="panel p-4">
+            <p className="text-[11px] tracking-wide text-muted-foreground uppercase">{k.label}</p>
+            <p className="mt-1 text-xl font-semibold" style={{ color: room.accent }}>
+              {k.value}
+            </p>
+            <p className="mt-0.5 text-xs text-muted-foreground">{k.sub}</p>
+          </div>
+        ))}
+      </div>
+      <div className="mt-3 flex flex-wrap gap-1.5">
+        {roomMetrics[room.id].map((m) => (
+          <Chip key={m.label} tone="teal">
+            {m.label}: {m.value}
+          </Chip>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function RoomsPage() {
   const [open, setOpen] = useState<string | null>("network");
+
+  useEffect(() => {
+    const hash = window.location.hash.replace("#", "");
+    if (!hash) return;
+    if (rooms.some((r) => r.id === hash)) {
+      setOpen(hash);
+      requestAnimationFrame(() =>
+        document.getElementById(hash)?.scrollIntoView({ behavior: "smooth", block: "start" }),
+      );
+    }
+  }, []);
 
   return (
     <div>
@@ -90,6 +156,8 @@ function RoomsPage() {
                     />
                   </Button>
                 </div>
+
+                {expanded && <RoomKpis room={room} />}
 
                 {expanded && (
                   <div className="animate-rise-in mt-6 grid gap-4 lg:grid-cols-2 xl:grid-cols-3">
