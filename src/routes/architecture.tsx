@@ -18,7 +18,10 @@ export const Route = createFileRoute("/architecture")({
         content:
           "A layered Microsoft-native reference architecture from experience to agent, data, operational systems, governance and value.",
       },
+      { property: "og:url", content: "https://agent-haven-hq.lovable.app/architecture" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://agent-haven-hq.lovable.app/architecture" }],
   }),
   component: Architecture,
 });

@@ -20,7 +20,10 @@ export const Route = createFileRoute("/")({
         content:
           "AI operating model for a connected telecom and media enterprise: rooms of agents, Agent365 governance, Microsoft architecture and $186M of value potential.",
       },
+      { property: "og:url", content: "https://agent-haven-hq.lovable.app/" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://agent-haven-hq.lovable.app/" }],
   }),
   component: CommandCenter,
 });
