@@ -686,8 +686,8 @@ export const agents: Agent[] = [
     url: "https://vital-copilot.lovable.app/",
   },
   {
-    id: "security-insight-scribe",
-    name: "Security Insight Scribe",
+    id: "security-investigation-ai",
+    name: "Security Investigation AI",
     room: "security",
     functionLabel: "Corporate Security",
     persona: "SOC Leader",
