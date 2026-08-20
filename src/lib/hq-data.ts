@@ -1330,12 +1330,12 @@ export const walkthroughSteps = [
   },
   {
     title: "Corporate Security room",
-    body: "The Corporate Security room brings Security Insight Scribe and Shield AI Sentinels together so the CISO sees detection, investigation and containment value in one place.",
+    body: "The Corporate Security room brings Security Investigation AI and Shield AI Sentinels together so the CISO sees detection, investigation and containment value in one place.",
     to: "/rooms#security",
   },
   {
     title: "Customer Support room",
-    body: "The Customer Support room pairs Assist Pro Genius, Support Insight Scribe and Network Genius AI to lift first-contact resolution and cut handle time across care.",
+    body: "The Customer Support room pairs Assist Pro Genius, Billing Inquiry AI and Network Genius AI to lift first-contact resolution and cut handle time across care.",
     to: "/rooms#support",
   },
   {
