@@ -16,7 +16,11 @@ export function WalkthroughProvider({ children }: { children: ReactNode }) {
   const go = (next: number) => {
     setStep(next);
     const target = walkthroughSteps[next];
-    if (target) navigate({ to: target.to });
+    if (!target) return;
+    const hashIndex = target.to.indexOf("#");
+    const path = hashIndex === -1 ? target.to : target.to.slice(0, hashIndex);
+    const hash = hashIndex === -1 ? "" : target.to.slice(hashIndex + 1);
+    navigate(hash ? { to: path, hash } : { to: path });
   };
 
   return (

@@ -1329,6 +1329,16 @@ export const walkthroughSteps = [
     to: "/rooms",
   },
   {
+    title: "Corporate Security room",
+    body: "The Corporate Security room brings Security Insight Scribe and Shield AI Sentinels together so the CISO sees detection, investigation and containment value in one place.",
+    to: "/rooms#security",
+  },
+  {
+    title: "Customer Support room",
+    body: "The Customer Support room pairs Assist Pro Genius, Support Insight Scribe and Network Genius AI to lift first-contact resolution and cut handle time across care.",
+    to: "/rooms#support",
+  },
+  {
     title: "AI Agent Marketplace",
     body: "The AI Agent Marketplace helps employees and leaders discover approved agent blueprints, understand business value, and request access.",
     to: "/marketplace",
@@ -1482,4 +1492,18 @@ export const roomMetrics: Record<RoomId, RoomMetric[]> = {
     { label: "Value realized", value: "$186M" },
     { label: "Portfolio adoption", value: "78%" },
   ],
+};
+
+export const roomValueM: Record<RoomId, number> = {
+  network: 31,
+  it: 29,
+  media: 42,
+  hr: 12,
+  consumer: 48,
+  business: 14,
+  finance: 22,
+  legal: 8,
+  security: 18,
+  support: 26,
+  executive: 24,
 };
