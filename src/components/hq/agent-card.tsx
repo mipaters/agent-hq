@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ExternalLink, Eye, Info, Star } from "lucide-react";
 import { toast } from "sonner";
 import type { Agent } from "@/lib/hq-data";
+import { launchDemo } from "@/lib/launch";
 import { certTone, riskTone, toneChip } from "@/lib/tone";
 import { Button } from "@/components/ui/button";
 import {
