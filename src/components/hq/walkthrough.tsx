@@ -17,7 +17,9 @@ export function WalkthroughProvider({ children }: { children: ReactNode }) {
     setStep(next);
     const target = walkthroughSteps[next];
     if (!target) return;
-    const [path, hash] = target.to.split("#");
+    const hashIndex = target.to.indexOf("#");
+    const path = hashIndex === -1 ? target.to : target.to.slice(0, hashIndex);
+    const hash = hashIndex === -1 ? "" : target.to.slice(hashIndex + 1);
     navigate(hash ? { to: path, hash } : { to: path });
   };
 
