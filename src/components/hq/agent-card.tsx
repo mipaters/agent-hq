@@ -142,10 +142,8 @@ export function AgentCard({ agent, compact = false }: { agent: Agent; compact?: 
               sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
             />
           </div>
-          <Button asChild variant="secondary">
-            <a href={agent.url} target="_blank" rel="noreferrer noopener">
-              Open in new tab instead <ExternalLink className="size-4" />
-            </a>
+          <Button variant="secondary" onClick={() => launchDemo(agent.url)}>
+            Open in new tab instead <ExternalLink className="size-4" />
           </Button>
         </DialogContent>
       </Dialog>
