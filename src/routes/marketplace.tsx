@@ -5,6 +5,7 @@ import { PageHeading } from "@/components/hq/shell";
 import { AgentCard } from "@/components/hq/agent-card";
 import { Button } from "@/components/ui/button";
 import { agentByName, agents, collections } from "@/lib/hq-data";
+import { launchDemo } from "@/lib/launch";
 
 export const Route = createFileRoute("/marketplace")({
   head: () => ({
@@ -113,15 +114,14 @@ function Marketplace() {
             <ul className="mt-3 space-y-1.5 text-sm">
               {c.agents.map((n) => (
                 <li key={n}>
-                  <a
-                    href={agentByName(n).url}
-                    target="_blank"
-                    rel="noreferrer noopener"
+                  <button
+                    type="button"
+                    onClick={() => launchDemo(agentByName(n).url)}
                     className="flex items-start gap-1.5 text-muted-foreground transition-colors hover:text-foreground"
                   >
                     <ExternalLink className="mt-0.5 size-3.5 shrink-0" />
                     <span>{n}</span>
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>

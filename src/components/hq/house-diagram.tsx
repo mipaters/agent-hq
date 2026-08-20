@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ExternalLink, Eye } from "lucide-react";
 import { agentsByRoom, rooms, roomMetrics, roomPersonas, type Agent } from "@/lib/hq-data";
+import { launchDemo } from "@/lib/launch";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -127,10 +128,9 @@ export function HouseDiagram() {
             <div className="mt-3 flex flex-wrap justify-center gap-2">
               {agentsByRoom("executive").map((a) => (
                 <div key={a.id} className="flex flex-wrap justify-center gap-2">
-                  <a
-                    href={a.url}
-                    target="_blank"
-                    rel="noreferrer noopener"
+                  <button
+                    type="button"
+                    onClick={() => launchDemo(a.url)}
                     className="inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-medium transition-colors"
                     style={{
                       borderColor: "color-mix(in oklab, var(--ms-cyan) 55%, transparent)",
@@ -138,7 +138,7 @@ export function HouseDiagram() {
                     }}
                   >
                     {a.name} <ExternalLink className="size-3.5" />
-                  </a>
+                  </button>
                   <button
                     type="button"
                     onClick={() => setPreviewAgent(a)}
@@ -236,10 +236,8 @@ export function HouseDiagram() {
               />
             )}
           </div>
-          <Button asChild variant="secondary">
-            <a href={previewAgent?.url} target="_blank" rel="noreferrer noopener">
-              Open in new tab instead <ExternalLink className="size-4" />
-            </a>
+          <Button variant="secondary" onClick={() => previewAgent && launchDemo(previewAgent.url)}>
+            Open in new tab instead <ExternalLink className="size-4" />
           </Button>
         </DialogContent>
       </Dialog>
