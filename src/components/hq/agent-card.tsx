@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ExternalLink, Eye, Info, Star } from "lucide-react";
 import { toast } from "sonner";
 import type { Agent } from "@/lib/hq-data";
+import { launchDemo } from "@/lib/launch";
 import { certTone, riskTone, toneChip } from "@/lib/tone";
 import { Button } from "@/components/ui/button";
 import {
@@ -72,10 +73,8 @@ export function AgentCard({ agent, compact = false }: { agent: Agent; compact?: 
         )}
 
         <div className="mt-auto flex flex-wrap gap-2 pt-1">
-          <Button asChild size="sm">
-            <a href={agent.url} target="_blank" rel="noreferrer noopener">
-              Launch Demo <ExternalLink className="size-3.5" />
-            </a>
+          <Button size="sm" onClick={() => launchDemo(agent.url)}>
+            Launch Demo <ExternalLink className="size-3.5" />
           </Button>
           <Button size="sm" variant="secondary" onClick={() => setPreview(true)}>
             <Eye className="size-3.5" /> Preview in Hub
@@ -120,10 +119,8 @@ export function AgentCard({ agent, compact = false }: { agent: Agent; compact?: 
               </div>
             ))}
           </dl>
-          <Button asChild>
-            <a href={agent.url} target="_blank" rel="noreferrer noopener">
-              Launch Demo <ExternalLink className="size-4" />
-            </a>
+          <Button onClick={() => launchDemo(agent.url)}>
+            Launch Demo <ExternalLink className="size-4" />
           </Button>
         </DialogContent>
       </Dialog>
@@ -145,10 +142,8 @@ export function AgentCard({ agent, compact = false }: { agent: Agent; compact?: 
               sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
             />
           </div>
-          <Button asChild variant="secondary">
-            <a href={agent.url} target="_blank" rel="noreferrer noopener">
-              Open in new tab instead <ExternalLink className="size-4" />
-            </a>
+          <Button variant="secondary" onClick={() => launchDemo(agent.url)}>
+            Open in new tab instead <ExternalLink className="size-4" />
           </Button>
         </DialogContent>
       </Dialog>

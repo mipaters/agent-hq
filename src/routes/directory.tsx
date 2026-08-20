@@ -3,6 +3,7 @@ import { ExternalLink } from "lucide-react";
 import { PageHeading } from "@/components/hq/shell";
 import { Button } from "@/components/ui/button";
 import { agentsByRoom, rooms } from "@/lib/hq-data";
+import { launchDemo } from "@/lib/launch";
 
 export const Route = createFileRoute("/directory")({
   head: () => ({
@@ -44,10 +45,8 @@ function Directory() {
               {agentsByRoom(room.id).map((a) => (
                 <li key={a.id} className="flex flex-wrap items-center gap-3 py-2.5">
                   <span className="flex-1 text-sm">{a.name}</span>
-                  <Button asChild size="sm" variant="secondary">
-                    <a href={a.url} target="_blank" rel="noreferrer noopener">
-                      Open demo <ExternalLink className="size-3.5" />
-                    </a>
+                  <Button size="sm" variant="secondary" onClick={() => launchDemo(a.url)}>
+                    Open demo <ExternalLink className="size-3.5" />
                   </Button>
                 </li>
               ))}

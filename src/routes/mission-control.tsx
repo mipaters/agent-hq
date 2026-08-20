@@ -6,6 +6,7 @@ import { PageHeading } from "@/components/hq/shell";
 import { Chip } from "@/components/hq/agent-card";
 import { Button } from "@/components/ui/button";
 import { agentByName, roomById, scenarios } from "@/lib/hq-data";
+import { launchDemo } from "@/lib/launch";
 
 export const Route = createFileRoute("/mission-control")({
   head: () => ({
@@ -211,10 +212,14 @@ function MissionControl() {
             <h3 className="text-sm font-semibold tracking-wide uppercase">Launch involved agents</h3>
             <div className="mt-3 grid gap-2">
               {scenario.agents.map((name) => (
-                <Button key={name} asChild size="sm" variant="secondary" className="justify-start">
-                  <a href={agentByName(name).url} target="_blank" rel="noreferrer noopener">
-                    <ExternalLink className="size-3.5" /> {name}
-                  </a>
+                <Button
+                  key={name}
+                  size="sm"
+                  variant="secondary"
+                  className="justify-start"
+                  onClick={() => launchDemo(agentByName(name).url)}
+                >
+                  <ExternalLink className="size-3.5" /> {name}
                 </Button>
               ))}
             </div>
