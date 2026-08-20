@@ -30,9 +30,9 @@ export function Shell({ children }: { children: React.ReactNode }) {
       <header className="hero-surface sticky top-0 z-40 border-b bg-background/85 backdrop-blur-xl">
         <div className="mx-auto flex max-w-[1400px] flex-wrap items-center gap-4 px-4 py-4 sm:px-6">
           <div className="min-w-0 flex-1">
-            <h1 className="text-lg font-semibold sm:text-xl">
+            <div className="text-lg font-semibold sm:text-xl">
               Agentic Telecom &amp; Media Company HQ
-            </h1>
+            </div>
             <p className="text-xs text-muted-foreground sm:text-sm">
               AI operating model for a connected telecom and media enterprise
             </p>
@@ -104,7 +104,7 @@ export function PageHeading({
   return (
     <div className="mb-6 max-w-3xl">
       <p className="text-xs font-semibold tracking-[0.2em] text-ms-cyan uppercase">{eyebrow}</p>
-      <h2 className="mt-2 text-2xl font-semibold sm:text-3xl">{title}</h2>
+      <h1 className="mt-2 text-2xl font-semibold sm:text-3xl">{title}</h1>
       <p className="mt-2 text-sm text-muted-foreground">{description}</p>
     </div>
   );

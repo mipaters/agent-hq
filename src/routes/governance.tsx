@@ -19,7 +19,10 @@ export const Route = createFileRoute("/governance")({
         content:
           "Every agent governed: risk classification, data sensitivity, approved actions, certification status, usage and ROI scoring.",
       },
+      { property: "og:url", content: "https://agent-haven-hq.lovable.app/governance" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://agent-haven-hq.lovable.app/governance" }],
   }),
   component: Governance,
 });

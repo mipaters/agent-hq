@@ -21,7 +21,10 @@ export const Route = createFileRoute("/marketplace")({
         content:
           "Filter approved agents by function, persona, value lever, governance status, maturity and Microsoft architecture pattern.",
       },
+      { property: "og:url", content: "https://agent-haven-hq.lovable.app/marketplace" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://agent-haven-hq.lovable.app/marketplace" }],
   }),
   component: Marketplace,
 });

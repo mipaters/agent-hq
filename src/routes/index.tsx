@@ -8,7 +8,7 @@ import { heroMessage, priorityAreas } from "@/lib/hq-data";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Executive Command Center | Agentic Telecom & Media Company HQ" },
+      { title: "Executive Command Center | Agentic Telecom HQ" },
       {
         name: "description",
         content:
@@ -20,7 +20,10 @@ export const Route = createFileRoute("/")({
         content:
           "AI operating model for a connected telecom and media enterprise: rooms of agents, Agent365 governance, Microsoft architecture and $186M of value potential.",
       },
+      { property: "og:url", content: "https://agent-haven-hq.lovable.app/" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://agent-haven-hq.lovable.app/" }],
   }),
   component: CommandCenter,
 });
@@ -32,9 +35,9 @@ function CommandCenter() {
         <p className="text-xs font-semibold tracking-[0.24em] text-ms-cyan uppercase">
           Executive Command Center
         </p>
-        <h2 className="mt-3 max-w-4xl text-3xl leading-tight font-semibold sm:text-4xl">
+        <h1 className="mt-3 max-w-4xl text-3xl leading-tight font-semibold sm:text-4xl">
           One governed operating model for every agent in the enterprise
-        </h2>
+        </h1>
         <p className="mt-4 max-w-4xl text-sm leading-relaxed text-muted-foreground sm:text-base">
           {heroMessage}
         </p>

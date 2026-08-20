@@ -21,7 +21,10 @@ export const Route = createFileRoute("/rooms")({
         content:
           "Eight rooms of specialized AI agents with business owners, outcomes and governance status.",
       },
+      { property: "og:url", content: "https://agent-haven-hq.lovable.app/rooms" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://agent-haven-hq.lovable.app/rooms" }],
   }),
   component: RoomsPage,
 });

@@ -18,7 +18,10 @@ export const Route = createFileRoute("/directory")({
         property: "og:description",
         content: "Launch any agentic solution blueprint demo directly from the executive HQ.",
       },
+      { property: "og:url", content: "https://agent-haven-hq.lovable.app/directory" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://agent-haven-hq.lovable.app/directory" }],
   }),
   component: Directory,
 });

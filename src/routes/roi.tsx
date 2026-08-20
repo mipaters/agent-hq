@@ -17,7 +17,10 @@ export const Route = createFileRoute("/roi")({
         content:
           "Revenue growth, revenue protected, cost reduction, productivity, risk and experience impact by business room.",
       },
+      { property: "og:url", content: "https://agent-haven-hq.lovable.app/roi" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://agent-haven-hq.lovable.app/roi" }],
   }),
   component: Roi,
 });

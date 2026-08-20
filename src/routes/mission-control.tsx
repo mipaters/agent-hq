@@ -22,7 +22,10 @@ export const Route = createFileRoute("/mission-control")({
         content:
           "A live agent collaboration canvas showing signals moving between rooms and the executive actions they trigger.",
       },
+      { property: "og:url", content: "https://agent-haven-hq.lovable.app/mission-control" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://agent-haven-hq.lovable.app/mission-control" }],
   }),
   component: MissionControl,
 });
