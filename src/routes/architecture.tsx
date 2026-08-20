@@ -10,7 +10,7 @@ export const Route = createFileRoute("/architecture")({
       {
         name: "description",
         content:
-          "How the agent ecosystem is built on Microsoft: Teams and Copilot experiences, Azure AI Foundry agents, Fabric data, Entra and Purview governance, Power BI value.",
+          "How the agent ecosystem is built on Microsoft: Teams and Copilot experiences, Azure AI Foundry agents, Fabric data, Entra and Purview governance.",
       },
       { property: "og:title", content: "Microsoft Architecture for the Agent Ecosystem" },
       {

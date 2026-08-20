@@ -8,7 +8,7 @@ import { heroMessage, priorityAreas } from "@/lib/hq-data";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Executive Command Center | Agentic Telecom & Media Company HQ" },
+      { title: "Executive Command Center | Agentic Telecom HQ" },
       {
         name: "description",
         content:
