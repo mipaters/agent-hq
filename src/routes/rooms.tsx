@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, useLocation } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { PageHeading } from "@/components/hq/shell";
@@ -84,8 +84,10 @@ function RoomKpis({ room }: { room: Room }) {
 function RoomsPage() {
   const [open, setOpen] = useState<string | null>("network");
 
+  const locationHash = useLocation({ select: (l) => l.hash });
+
   useEffect(() => {
-    const hash = window.location.hash.replace("#", "");
+    const hash = locationHash.replace("#", "");
     if (!hash) return;
     if (rooms.some((r) => r.id === hash)) {
       setOpen(hash);
@@ -93,7 +95,7 @@ function RoomsPage() {
         document.getElementById(hash)?.scrollIntoView({ behavior: "smooth", block: "start" }),
       );
     }
-  }, []);
+  }, [locationHash]);
 
   return (
     <div>
