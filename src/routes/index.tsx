@@ -35,9 +35,9 @@ function CommandCenter() {
         <p className="text-xs font-semibold tracking-[0.24em] text-ms-cyan uppercase">
           Executive Command Center
         </p>
-        <h2 className="mt-3 max-w-4xl text-3xl leading-tight font-semibold sm:text-4xl">
+        <h1 className="mt-3 max-w-4xl text-3xl leading-tight font-semibold sm:text-4xl">
           One governed operating model for every agent in the enterprise
-        </h2>
+        </h1>
         <p className="mt-4 max-w-4xl text-sm leading-relaxed text-muted-foreground sm:text-base">
           {heroMessage}
         </p>
