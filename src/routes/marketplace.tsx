@@ -13,7 +13,7 @@ export const Route = createFileRoute("/marketplace")({
       {
         name: "description",
         content:
-          "Discover 22 approved enterprise AI agents with business outcomes, ROI category, risk level, governance status and adoption scores.",
+          "Discover 17 approved enterprise AI agents with business outcomes, ROI category, risk level, governance status and adoption scores.",
       },
       { property: "og:title", content: "AI Agent Marketplace — Agentic Telecom & Media HQ" },
       {
