@@ -23,8 +23,8 @@ const platform = [
 // Floors of the building, top to bottom.
 const floors: { label: string; roomIds: string[] }[] = [
   { label: "Growth floor", roomIds: ["consumer", "business"] },
-  { label: "Experience floor", roomIds: ["media", "hr"] },
-  { label: "Operations floor", roomIds: ["network", "it"] },
+  { label: "Experience floor", roomIds: ["media", "hr", "support"] },
+  { label: "Operations floor", roomIds: ["network", "it", "security"] },
   { label: "Control floor", roomIds: ["finance", "legal"] },
 ];
 
