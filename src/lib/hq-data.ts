@@ -1359,7 +1359,7 @@ export const walkthroughSteps = [
   },
   {
     title: "Customer Support room",
-    body: "The Customer Support room pairs Assist Pro Genius, Billing Inquiry AI and Network Genius AI to lift first-contact resolution and cut handle time across care.",
+    body: "The Customer Support room brings together Assist Pro Genius, Billing Inquiry AI, Network Genius AI and Spectrum AI Connect to lift first-contact resolution, cut handle time, and help customers upgrade and activate services on their own.",
     to: "/rooms#support",
   },
   {
