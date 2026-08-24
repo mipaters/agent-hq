@@ -1313,14 +1313,14 @@ export const architectureLayers = [
 ];
 
 export const governanceControls = [
-  { name: "Agent registry", detail: "22 registered agents, single source of truth", tone: "blue" },
+  { name: "Agent registry", detail: "23 registered agents, single source of truth", tone: "blue" },
   { name: "Agent owner", detail: "Named technical owner for every agent", tone: "blue" },
   { name: "Business sponsor", detail: "Executive sponsor accountable for value", tone: "teal" },
   { name: "Approved data sources", detail: "Purview-labelled sources per agent", tone: "teal" },
   { name: "Approved actions", detail: "Explicit action scopes, deny by default", tone: "cyan" },
-  { name: "Human approval requirements", detail: "17 of 22 agents gated on human approval", tone: "amber" },
-  { name: "Risk classification", detail: "5 high, 9 medium, 3 low-medium", tone: "red" },
-  { name: "Certification status", detail: "11 certified, 4 production candidates, 2 in review", tone: "green" },
+  { name: "Human approval requirements", detail: "18 of 23 agents gated on human approval", tone: "amber" },
+  { name: "Risk classification", detail: "5 high, 9 medium, 4 low-medium", tone: "red" },
+  { name: "Certification status", detail: "12 certified, 4 production candidates, 2 in review", tone: "green" },
   { name: "Usage analytics", detail: "Daily active usage and task success telemetry", tone: "blue" },
   { name: "Audit trail", detail: "Immutable action and prompt audit log", tone: "violet" },
   { name: "Cost attribution", detail: "Per-agent inference and data cost ledger", tone: "teal" },
