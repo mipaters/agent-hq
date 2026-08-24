@@ -1344,23 +1344,13 @@ export const walkthroughSteps = [
   },
   {
     title: "Rooms of the house",
-    body: "Each room represents a major business function: Network, IT, Media, HR, Consumer, Business, Finance, and Legal.",
+    body: "Each room represents a major business function: Network, IT, Media, HR, Consumer, Business, Finance, Legal, Corporate Security, and Customer Support.",
     to: "/rooms",
   },
   {
     title: "Specialized agents",
-    body: "Each room holds blueprints for specialized agents your teams can build with Microsoft Frontier Company FDE and Industry support — every one is demonstrable today.",
+    body: "Every room holds blueprints for specialized agents your teams can build with Microsoft Frontier Company FDE and Industry support — from network copilots to security investigation and customer support assistants, every one is demonstrable today.",
     to: "/rooms",
-  },
-  {
-    title: "Corporate Security room",
-    body: "The Corporate Security room brings Security Investigation AI and Shield AI Sentinels together so the CISO sees detection, investigation and containment value in one place.",
-    to: "/rooms#security",
-  },
-  {
-    title: "Customer Support room",
-    body: "The Customer Support room brings together Assist Pro Genius, Billing Inquiry AI, Network Genius AI and Spectrum AI Connect to lift first-contact resolution, cut handle time, and help customers upgrade and activate services on their own.",
-    to: "/rooms#support",
   },
   {
     title: "AI Agent Marketplace",
