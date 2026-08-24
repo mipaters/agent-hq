@@ -860,7 +860,7 @@ export const agentById = (id: string) => agents.find((a) => a.id === id);
 export const agentByName = (name: string) => agents.find((a) => a.name === name)!;
 
 export const kpis = [
-  { label: "Agent Blueprints", value: "22", sub: "Across 10 business functions", tone: "blue" },
+  { label: "Agent Blueprints", value: "23", sub: "Across 10 business functions", tone: "blue" },
   { label: "Business Functions Covered", value: "10", sub: "Network to Customer Support", tone: "teal" },
   { label: "Annual Value Potential", value: "$186M", sub: "Validated business case", tone: "green" },
   {
