@@ -806,30 +806,6 @@ export const agents: Agent[] = [
     url: "https://network-genius-ai.lovable.app",
   },
   {
-    id: "spectrum-ai-connect",
-    name: "Spectrum AI Connect",
-    room: "support",
-    functionLabel: "Customer Support",
-    persona: "Digital Support Leader",
-    description:
-      "Customer-facing support companion that helps subscribers add services, troubleshoot issues, upgrade plans, activate new services, and resolve billing inquiries in one conversational experience.",
-    outcome: "Higher self-service completion, faster service activation, and fewer billing and upgrade escalations.",
-    roiCategory: "Revenue growth",
-    risk: "Low-Medium",
-    dataSensitivity: "High",
-    approvedActions: "Troubleshoot service issues, recommend upgrades, activate services, explain bills, guide plan changes",
-    humanApproval: "Required for plan changes and activations",
-    certification: "Certified",
-    governance: "Certified",
-    adoption: 72,
-    usage: 76,
-    roiScore: 84,
-    maturity: "Scaling",
-    pattern: "Azure AI Foundry + Dynamics 365 Customer Service",
-    status: "Live",
-    url: "https://spectrum-ai-connect.lovable.app",
-  },
-  {
     id: "executive-copilot",
     name: "Executive Copilot",
     room: "executive",
@@ -860,7 +836,7 @@ export const agentById = (id: string) => agents.find((a) => a.id === id);
 export const agentByName = (name: string) => agents.find((a) => a.name === name)!;
 
 export const kpis = [
-  { label: "Agent Blueprints", value: "23", sub: "Across 10 business functions", tone: "blue" },
+  { label: "Agent Blueprints", value: "22", sub: "Across 10 business functions", tone: "blue" },
   { label: "Business Functions Covered", value: "10", sub: "Network to Customer Support", tone: "teal" },
   { label: "Annual Value Potential", value: "$186M", sub: "Validated business case", tone: "green" },
   {
@@ -1313,12 +1289,12 @@ export const architectureLayers = [
 ];
 
 export const governanceControls = [
-  { name: "Agent registry", detail: "23 registered agents, single source of truth", tone: "blue" },
+  { name: "Agent registry", detail: "22 registered agents, single source of truth", tone: "blue" },
   { name: "Agent owner", detail: "Named technical owner for every agent", tone: "blue" },
   { name: "Business sponsor", detail: "Executive sponsor accountable for value", tone: "teal" },
   { name: "Approved data sources", detail: "Purview-labelled sources per agent", tone: "teal" },
   { name: "Approved actions", detail: "Explicit action scopes, deny by default", tone: "cyan" },
-  { name: "Human approval requirements", detail: "18 of 23 agents gated on human approval", tone: "amber" },
+  { name: "Human approval requirements", detail: "17 of 22 agents gated on human approval", tone: "amber" },
   { name: "Risk classification", detail: "5 high, 9 medium, 4 low-medium", tone: "red" },
   { name: "Certification status", detail: "12 certified, 4 production candidates, 2 in review", tone: "green" },
   { name: "Usage analytics", detail: "Daily active usage and task success telemetry", tone: "blue" },
