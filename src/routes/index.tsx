@@ -3,13 +3,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { HouseDiagram } from "@/components/hq/house-diagram";
 import { CustomerDemoView } from "@/components/hq/customer-demos";
 import { customerDemos } from "@/lib/hq-data";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 
 export const Route = createFileRoute("/")({
   head: () => ({
