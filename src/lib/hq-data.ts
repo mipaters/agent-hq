@@ -1497,3 +1497,163 @@ export const roomValueM: Record<RoomId, number> = {
   support: 26,
   executive: 24,
 };
+
+export type CustomerDemo = {
+  id: string;
+  name: string;
+  shortName: string;
+  accent: string;
+  description: string;
+  demos: {
+    id: string;
+    name: string;
+    category: string;
+    description: string;
+    outcome: string;
+    url: string;
+    tone: string;
+  }[];
+};
+
+export const customerDemos: CustomerDemo[] = [
+  {
+    id: "rogers",
+    name: "Rogers Agentic Solutions",
+    shortName: "Rogers",
+    accent: "var(--ms-red)",
+    description:
+      "Customer-specific agentic demos tailored for Rogers Communications, spanning consumer growth, network operations, media, and customer experience.",
+    demos: [
+      {
+        id: "rogers-consumer-growth",
+        name: "Rogers Consumer Growth Agent",
+        category: "Consumer",
+        description:
+          "AI agent that identifies Rogers customers ready for mobile, internet, and media convergence offers based on household signals and usage patterns.",
+        outcome: "Higher attach and lifetime value across Rogers consumer segments.",
+        url: "https://rogers-consumer-growth.lovable.app",
+        tone: "violet",
+      },
+      {
+        id: "rogers-churn-assist",
+        name: "Rogers Churn Reduction Assist",
+        category: "Consumer",
+        description:
+          "Retention agent that scores churn risk, surfaces save opportunities, and recommends next-best actions for Rogers care and digital channels.",
+        outcome: "Reduced churn and higher save rates in competitive Canadian markets.",
+        url: "https://rogers-churn-assist.lovable.app",
+        tone: "violet",
+      },
+      {
+        id: "rogers-network-ops",
+        name: "Rogers Network Operations Copilot",
+        category: "Network",
+        description:
+          "Network engineering copilot tuned for Rogers wireless and wireline topology, outage correlation, and field dispatch support.",
+        outcome: "Faster root cause analysis and improved network reliability.",
+        url: "https://rogers-network-ops.lovable.app",
+        tone: "blue",
+      },
+      {
+        id: "rogers-media-rights",
+        name: "Rogers Sports & Media Rights Agent",
+        category: "Media",
+        description:
+          "Rights intelligence agent for Rogers Sports & Media, tracking exclusivity windows, partner obligations, and monetization opportunities.",
+        outcome: "Stronger rights monetization and fewer exclusivity breaches.",
+        url: "https://rogers-media-rights.lovable.app",
+        tone: "amber",
+      },
+      {
+        id: "rogers-support-companion",
+        name: "Rogers Customer Support Companion",
+        category: "Customer Support",
+        description:
+          "Customer-facing support agent that helps Rogers subscribers troubleshoot, upgrade services, and resolve billing inquiries.",
+        outcome: "Higher first-contact resolution and improved customer satisfaction.",
+        url: "https://rogers-support-companion.lovable.app",
+        tone: "teal",
+      },
+      {
+        id: "rogers-billing-clarity",
+        name: "Rogers Billing Clarity AI",
+        category: "Customer Support",
+        description:
+          "Billing inquiry agent that explains Rogers charges, identifies discrepancies, and guides customers through payment and plan options.",
+        outcome: "Fewer billing escalations and faster billing resolution.",
+        url: "https://rogers-billing-clarity.lovable.app",
+        tone: "teal",
+      },
+    ],
+  },
+  {
+    id: "charter",
+    name: "Charter Agentic Solutions",
+    shortName: "Charter",
+    accent: "var(--ms-blue)",
+    description:
+      "Customer-specific agentic demos tailored for Charter Communications, focused on broadband operations, SMB growth, and customer experience.",
+    demos: [
+      {
+        id: "charter-smb-growth",
+        name: "Charter SMB Growth Agent",
+        category: "Business",
+        description:
+          "B2B sales agent that identifies Charter SMB prospects, prioritizes leads, and drafts personalized outreach for commercial services.",
+        outcome: "Higher SMB conversion and faster quote-to-close cycles.",
+        url: "https://charter-smb-growth.lovable.app",
+        tone: "cyan",
+      },
+      {
+        id: "charter-sales-coach",
+        name: "Charter Enterprise Sales Coach",
+        category: "Business",
+        description:
+          "Deal coaching agent that helps Charter enterprise sellers navigate complex B2B opportunities and executive conversations.",
+        outcome: "Improved win rates and seller productivity on large deals.",
+        url: "https://charter-sales-coach.lovable.app",
+        tone: "cyan",
+      },
+      {
+        id: "charter-network-reliability",
+        name: "Charter Network Reliability Agent",
+        category: "Network",
+        description:
+          "Network guardian tuned for Charter broadband and video infrastructure, detecting service degradation and guiding remediation.",
+        outcome: "Proactive detection and faster restoration of service issues.",
+        url: "https://charter-network-reliability.lovable.app",
+        tone: "blue",
+      },
+      {
+        id: "charter-tech-support",
+        name: "Charter Technical Support AI",
+        category: "Customer Support",
+        description:
+          "Technical support agent that diagnoses Charter connectivity and device issues, guiding care teams and customers through resolution.",
+        outcome: "Higher technical resolution accuracy and fewer truck rolls.",
+        url: "https://charter-tech-support.lovable.app",
+        tone: "teal",
+      },
+      {
+        id: "charter-billing-guide",
+        name: "Charter Billing Guide AI",
+        category: "Customer Support",
+        description:
+          "Billing inquiry agent that helps Charter customers understand charges, resolve discrepancies, and manage payment options.",
+        outcome: "Faster billing resolution and reduced billing-related contacts.",
+        url: "https://charter-billing-guide.lovable.app",
+        tone: "teal",
+      },
+      {
+        id: "charter-field-operations",
+        name: "Charter Field Operations Copilot",
+        category: "Operations",
+        description:
+          "Field technician copilot that schedules appointments, diagnoses installation issues, and optimizes dispatch routes for Charter technicians.",
+        outcome: "Improved first-visit resolution and technician productivity.",
+        url: "https://charter-field-ops.lovable.app",
+        tone: "green",
+      },
+    ],
+  },
+];
