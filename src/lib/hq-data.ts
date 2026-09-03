@@ -1554,6 +1554,16 @@ export const customerDemos: CustomerDemo[] = [
         url: "https://mlseapp.patersonindustrydemos.com",
         tone: "red",
       },
+      {
+        id: "rogers-network",
+        name: "Rogers Autonomous Network Agentic Solution",
+        category: "Network",
+        description:
+          "Autonomous network operations demo showing self-healing, predictive maintenance, capacity optimization, and intelligent incident response for Rogers infrastructure.",
+        outcome: "Higher network reliability, lower MTTR, and reduced operational overhead.",
+        url: "https://rogersnetwork.patersonindustrydemos.com",
+        tone: "red",
+      },
     ],
   },
   {
