@@ -43,19 +43,22 @@ function CommandCenter() {
             </p>
           </div>
           <div className="w-full sm:w-64">
-            <Select value={selectedCustomer} onValueChange={setSelectedCustomer}>
-              <SelectTrigger>
-                <SelectValue placeholder="Select view" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="hq">Agentic HQ (default)</SelectItem>
-                {customerDemos.map((c) => (
-                  <SelectItem key={c.id} value={c.id}>
-                    {c.shortName} demos
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+            <label htmlFor="customer-select" className="sr-only">
+              Select customer demos
+            </label>
+            <select
+              id="customer-select"
+              value={selectedCustomer}
+              onChange={(e) => setSelectedCustomer(e.target.value)}
+              className="h-9 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground shadow-sm ring-offset-background focus:outline-none focus:ring-1 focus:ring-ring"
+            >
+              <option value="hq">Agentic HQ (default)</option>
+              {customerDemos.map((c) => (
+                <option key={c.id} value={c.id}>
+                  {c.shortName} demos
+                </option>
+              ))}
+            </select>
           </div>
         </div>
       </section>
