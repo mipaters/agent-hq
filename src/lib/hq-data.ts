@@ -1522,7 +1522,7 @@ export const customerDemos: CustomerDemo[] = [
     shortName: "Rogers",
     accent: "var(--ms-red)",
     description:
-      "Customer-specific agentic demos built for Rogers Communications: the Agentic AI website and mobile app, the MLSE experience, autonomous network operations, Rogers Centre revenue optimization, and FinOps multicloud cost management.",
+      "Customer-specific agentic demos built for Rogers Communications: the Agentic AI website and mobile app, the MLSE One App experience, autonomous network operations, Rogers Centre revenue optimization, and FinOps multicloud cost management.",
     demos: [
       {
         id: "rogers-website",
@@ -1546,10 +1546,10 @@ export const customerDemos: CustomerDemo[] = [
       },
       {
         id: "rogers-mlse",
-        name: "Rogers MLSE Demo",
+        name: "Rogers MLSE One App demo",
         category: "Media & Sports",
         description:
-          "MLSE-focused demo highlighting agentic AI use cases for sports, entertainment, venue revenue, and media partner value.",
+          "Rogers MLSE One App demo showing a customer-facing app that delivers personalized content, sports and entertainment experiences, venue engagement, and media partner value.",
         outcome: "Stronger venue and media monetization for Rogers Sports & Media.",
         url: "https://mlseapp.patersonindustrydemos.com",
         tone: "red",
