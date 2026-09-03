@@ -1522,7 +1522,7 @@ export const customerDemos: CustomerDemo[] = [
     shortName: "Rogers",
     accent: "var(--ms-red)",
     description:
-      "Customer-specific agentic demos built for Rogers Communications: the website demo for Agentic AI, its mobile app companion, and the MLSE experience.",
+      "Customer-specific agentic demos built for Rogers Communications: the Agentic AI website and mobile app, the MLSE experience, autonomous network operations, and Rogers Centre revenue optimization.",
     demos: [
       {
         id: "rogers-website",
