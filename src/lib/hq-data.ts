@@ -1522,7 +1522,7 @@ export const customerDemos: CustomerDemo[] = [
     shortName: "Rogers",
     accent: "var(--ms-red)",
     description:
-      "Customer-specific agentic demos built for Rogers Communications: the website demo for Agentic AI, its mobile app companion, and the MLSE experience.",
+      "Customer-specific agentic demos built for Rogers Communications: the Agentic AI website and mobile app, the MLSE experience, autonomous network operations, and Rogers Centre revenue optimization.",
     demos: [
       {
         id: "rogers-website",
@@ -1562,6 +1562,16 @@ export const customerDemos: CustomerDemo[] = [
           "Autonomous network operations demo showing self-healing, predictive maintenance, capacity optimization, and intelligent incident response for Rogers infrastructure.",
         outcome: "Higher network reliability, lower MTTR, and reduced operational overhead.",
         url: "https://rogersnetwork.patersonindustrydemos.com",
+        tone: "red",
+      },
+      {
+        id: "rogers-centre-revenue",
+        name: "Rogers Centre Revenue Optimization Solution",
+        category: "Venue Revenue",
+        description:
+          "Venue revenue optimization demo for Rogers Centre, modeling ticket yield, premium seating, concessions, sponsorship inventory, and event monetization.",
+        outcome: "Higher yield per event and stronger partner value at Rogers Centre.",
+        url: "https://rogerscentre.patersonindustrydemos.com",
         tone: "red",
       },
     ],
