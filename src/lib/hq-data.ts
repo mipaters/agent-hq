@@ -1522,7 +1522,7 @@ export const customerDemos: CustomerDemo[] = [
     shortName: "Rogers",
     accent: "var(--ms-red)",
     description:
-      "Customer-specific agentic demos built for Rogers Communications: the Agentic AI website and mobile app, the MLSE experience, autonomous network operations, and Rogers Centre revenue optimization.",
+      "Customer-specific agentic demos built for Rogers Communications: the Agentic AI website and mobile app, the MLSE experience, autonomous network operations, Rogers Centre revenue optimization, and FinOps multicloud cost management.",
     demos: [
       {
         id: "rogers-website",
@@ -1572,6 +1572,16 @@ export const customerDemos: CustomerDemo[] = [
           "Venue revenue optimization demo for Rogers Centre, modeling ticket yield, premium seating, concessions, sponsorship inventory, and event monetization.",
         outcome: "Higher yield per event and stronger partner value at Rogers Centre.",
         url: "https://rogerscentre.patersonindustrydemos.com",
+        tone: "red",
+      },
+      {
+        id: "rogers-finops",
+        name: "Rogers FinOps Multicloud Solution",
+        category: "IT / FinOps",
+        description:
+          "FinOps multicloud demo for Rogers showing cloud cost visibility, anomaly detection, budget guardrails, and workload optimization across Azure, AWS, and Google Cloud.",
+        outcome: "Lower cloud spend, better budget accountability, and reduced FinOps overhead.",
+        url: "https://rogersfinops.patersonindustrydemos.com",
         tone: "red",
       },
     ],
