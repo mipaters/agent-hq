@@ -37,9 +37,9 @@ function CommandCenter() {
       <section className="panel p-5">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <h3 className="text-xl font-semibold">Executive Command Center</h3>
+            <h3 className="text-xl font-semibold">Customer Demo Access</h3>
             <p className="text-sm text-muted-foreground">
-              Choose the enterprise view or jump to customer-specific demos.
+              Switch between the enterprise HQ view and customer-specific agentic demos.
             </p>
           </div>
           <div className="w-full sm:w-64">
