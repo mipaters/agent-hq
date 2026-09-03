@@ -1564,6 +1564,16 @@ export const customerDemos: CustomerDemo[] = [
         url: "https://rogersnetwork.patersonindustrydemos.com",
         tone: "red",
       },
+      {
+        id: "rogers-centre-revenue",
+        name: "Rogers Centre Revenue Optimization Solution",
+        category: "Venue Revenue",
+        description:
+          "Venue revenue optimization demo for Rogers Centre, modeling ticket yield, premium seating, concessions, sponsorship inventory, and event monetization.",
+        outcome: "Higher yield per event and stronger partner value at Rogers Centre.",
+        url: "https://rogerscentre.patersonindustrydemos.com",
+        tone: "red",
+      },
     ],
   },
   {
