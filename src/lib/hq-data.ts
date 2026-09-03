@@ -1574,6 +1574,16 @@ export const customerDemos: CustomerDemo[] = [
         url: "https://rogerscentre.patersonindustrydemos.com",
         tone: "red",
       },
+      {
+        id: "rogers-finops",
+        name: "Rogers FinOps Multicloud Solution",
+        category: "IT / FinOps",
+        description:
+          "FinOps multicloud demo for Rogers showing cloud cost visibility, anomaly detection, budget guardrails, and workload optimization across Azure, AWS, and Google Cloud.",
+        outcome: "Lower cloud spend, better budget accountability, and reduced FinOps overhead.",
+        url: "https://rogersfinops.patersonindustrydemos.com",
+        tone: "red",
+      },
     ],
   },
   {
