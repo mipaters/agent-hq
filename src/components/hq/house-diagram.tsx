@@ -26,6 +26,7 @@ const floors: { label: string; roomIds: string[] }[] = [
   { label: "Growth floor", roomIds: ["consumer", "business"] },
   { label: "Experience floor", roomIds: ["media", "hr", "support"] },
   { label: "Operations floor", roomIds: ["network", "it", "security"] },
+  { label: "Field floor", roomIds: ["fieldservice"] },
   { label: "Control floor", roomIds: ["finance", "legal"] },
 ];
 
