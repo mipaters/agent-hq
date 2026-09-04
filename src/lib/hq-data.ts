@@ -1438,6 +1438,11 @@ export const roomPersonas: Record<RoomId, RoomPersona[]> = {
     { role: "Care Operations Leader", title: "Handle time and resolution quality" },
     { role: "Digital Support Leader", title: "Self-serve and assisted channels" },
   ],
+  fieldservice: [
+    { role: "Field Operations Leader", title: "First-time fix and truck-roll efficiency" },
+    { role: "Dispatch Leader", title: "Scheduling, routing and on-time arrival" },
+    { role: "Installation & Repair Leader", title: "Technician productivity and quality" },
+  ],
   executive: [
     { role: "CEO", title: "Enterprise performance and strategy" },
     { role: "COO", title: "Operational execution across the house" },
@@ -1496,6 +1501,11 @@ export const roomMetrics: Record<RoomId, RoomMetric[]> = {
     { label: "Average handle time", value: "-29%" },
     { label: "CSAT", value: "+11 pts" },
   ],
+  fieldservice: [
+    { label: "First-time fix rate", value: "+19 pts" },
+    { label: "Repeat truck rolls", value: "-26%" },
+    { label: "Jobs per technician", value: "+14%" },
+  ],
   executive: [
     { label: "Decision cycle time", value: "-42%" },
     { label: "Value realized", value: "$186M" },
@@ -1514,6 +1524,7 @@ export const roomValueM: Record<RoomId, number> = {
   legal: 8,
   security: 18,
   support: 26,
+  fieldservice: 17,
   executive: 24,
 };
 
