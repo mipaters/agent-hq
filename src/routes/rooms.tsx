@@ -13,7 +13,7 @@ export const Route = createFileRoute("/rooms")({
       {
         name: "description",
         content:
-          "Explore eight business rooms — network, IT, media, HR, consumer, business, finance and legal — each with purpose-built AI agents, owners and outcomes.",
+          "Explore the business rooms — network, IT, media, HR, consumer, business, finance, legal, security, support and field services — each with purpose-built AI agents, owners and outcomes.",
       },
       { property: "og:title", content: "Rooms of the House — Agentic Telecom & Media HQ" },
       {

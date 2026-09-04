@@ -9,6 +9,7 @@ export type RoomId =
   | "legal"
   | "security"
   | "support"
+  | "fieldservice"
   | "executive";
 
 export type Agent = {
@@ -229,6 +230,24 @@ export const rooms: Room[] = [
     governance: "Certified, care-owned",
     maturity: 79,
     accent: "var(--ms-teal)",
+  },
+  {
+    id: "fieldservice",
+    name: "Field Services Agentic Solutions",
+    short: "Field Services Room",
+    persona: "Field Operations Leader, Dispatch Leader, Workforce Management Leader, Installation & Repair Leader",
+    owner: "Field Operations Leader",
+    outcomes: [
+      "Higher first-time fix rate",
+      "Fewer repeat truck rolls",
+      "Smarter dispatch and routing",
+      "Better technician productivity",
+      "Improved on-time arrival",
+      "Better customer install experience",
+    ],
+    governance: "Certified, field-operations-owned",
+    maturity: 73,
+    accent: "var(--ms-amber)",
   },
   {
     id: "executive",
@@ -806,6 +825,30 @@ export const agents: Agent[] = [
     url: "https://network-genius-ai.lovable.app",
   },
   {
+    id: "field-service-ai",
+    name: "Field Service Optimization AI",
+    room: "fieldservice",
+    functionLabel: "Field Services",
+    persona: "Field Operations Leader",
+    description:
+      "Agentic field service solution that optimizes dispatch and routing, predicts job complexity, and guides technicians through installs and repairs with real-time context.",
+    outcome: "Higher first-time fix rate, fewer repeat truck rolls, and better technician productivity.",
+    roiCategory: "Cost reduction",
+    risk: "Medium",
+    dataSensitivity: "High",
+    approvedActions: "Optimize dispatch and routing, surface job context, recommend resolution steps",
+    humanApproval: "Required for schedule overrides and customer commitments",
+    certification: "Certified",
+    governance: "Certified",
+    adoption: 72,
+    usage: 74,
+    roiScore: 84,
+    maturity: "Scaling",
+    pattern: "Azure AI Foundry + Dynamics 365 Field Service + maps and telemetry connectors",
+    status: "Live",
+    url: "https://fieldservice.patersonindustrydemos.com",
+  },
+  {
     id: "executive-copilot",
     name: "Executive Copilot",
     room: "executive",
@@ -836,8 +879,8 @@ export const agentById = (id: string) => agents.find((a) => a.id === id);
 export const agentByName = (name: string) => agents.find((a) => a.name === name)!;
 
 export const kpis = [
-  { label: "Agent Blueprints", value: "22", sub: "Across 10 business functions", tone: "blue" },
-  { label: "Business Functions Covered", value: "10", sub: "Network to Customer Support", tone: "teal" },
+  { label: "Agent Blueprints", value: "23", sub: "Across 11 business functions", tone: "blue" },
+  { label: "Business Functions Covered", value: "11", sub: "Network to Field Services", tone: "teal" },
   { label: "Annual Value Potential", value: "$186M", sub: "Validated business case", tone: "green" },
   {
     label: "Productivity Hours Recovered",
@@ -1294,7 +1337,7 @@ export const governanceControls = [
   { name: "Business sponsor", detail: "Executive sponsor accountable for value", tone: "teal" },
   { name: "Approved data sources", detail: "Purview-labelled sources per agent", tone: "teal" },
   { name: "Approved actions", detail: "Explicit action scopes, deny by default", tone: "cyan" },
-  { name: "Human approval requirements", detail: "17 of 22 agents gated on human approval", tone: "amber" },
+  { name: "Human approval requirements", detail: "18 of 23 agents gated on human approval", tone: "amber" },
   { name: "Risk classification", detail: "5 high, 9 medium, 4 low-medium", tone: "red" },
   { name: "Certification status", detail: "12 certified, 4 production candidates, 2 in review", tone: "green" },
   { name: "Usage analytics", detail: "Daily active usage and task success telemetry", tone: "blue" },
@@ -1419,6 +1462,11 @@ export const roomPersonas: Record<RoomId, RoomPersona[]> = {
     { role: "Care Operations Leader", title: "Handle time and resolution quality" },
     { role: "Digital Support Leader", title: "Self-serve and assisted channels" },
   ],
+  fieldservice: [
+    { role: "Field Operations Leader", title: "First-time fix and truck-roll efficiency" },
+    { role: "Dispatch Leader", title: "Scheduling, routing and on-time arrival" },
+    { role: "Installation & Repair Leader", title: "Technician productivity and quality" },
+  ],
   executive: [
     { role: "CEO", title: "Enterprise performance and strategy" },
     { role: "COO", title: "Operational execution across the house" },
@@ -1477,6 +1525,11 @@ export const roomMetrics: Record<RoomId, RoomMetric[]> = {
     { label: "Average handle time", value: "-29%" },
     { label: "CSAT", value: "+11 pts" },
   ],
+  fieldservice: [
+    { label: "First-time fix rate", value: "+19 pts" },
+    { label: "Repeat truck rolls", value: "-26%" },
+    { label: "Jobs per technician", value: "+14%" },
+  ],
   executive: [
     { label: "Decision cycle time", value: "-42%" },
     { label: "Value realized", value: "$186M" },
@@ -1495,6 +1548,7 @@ export const roomValueM: Record<RoomId, number> = {
   legal: 8,
   security: 18,
   support: 26,
+  fieldservice: 17,
   executive: 24,
 };
 
@@ -1522,7 +1576,7 @@ export const customerDemos: CustomerDemo[] = [
     shortName: "Rogers",
     accent: "var(--ms-red)",
     description:
-      "Customer-specific agentic demos built for Rogers Communications: the Agentic AI website and mobile app, the MLSE One App experience, autonomous network operations, Rogers Centre revenue optimization, FinOps multicloud cost management, and churn reduction.",
+      "Customer-specific agentic demos built for Rogers Communications: the Agentic AI website and mobile app, the MLSE One App experience, autonomous network operations, Rogers Centre revenue optimization, FinOps multicloud cost management, churn reduction, and field service optimization.",
     demos: [
       {
         id: "rogers-website",
@@ -1592,6 +1646,16 @@ export const customerDemos: CustomerDemo[] = [
           "Churn reduction demo for Rogers that identifies at-risk customers, surfaces retention offers, and guides care and digital teams through next-best actions.",
         outcome: "Lower churn, higher save rates, and stronger customer lifetime value.",
         url: "https://churn.patersonindustrydemos.com",
+        tone: "red",
+      },
+      {
+        id: "rogers-field-service",
+        name: "Rogers Field Service Solution",
+        category: "Field Services",
+        description:
+          "Field service optimization demo for Rogers showing intelligent dispatch, routing, technician guidance, and first-time-fix improvements for install and repair operations.",
+        outcome: "Higher first-time fix rate, fewer repeat truck rolls, and better technician productivity.",
+        url: "https://fieldservice.patersonindustrydemos.com",
         tone: "red",
       },
     ],
