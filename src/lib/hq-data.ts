@@ -825,6 +825,30 @@ export const agents: Agent[] = [
     url: "https://network-genius-ai.lovable.app",
   },
   {
+    id: "field-service-ai",
+    name: "Field Service Optimization AI",
+    room: "fieldservice",
+    functionLabel: "Field Services",
+    persona: "Field Operations Leader",
+    description:
+      "Agentic field service solution that optimizes dispatch and routing, predicts job complexity, and guides technicians through installs and repairs with real-time context.",
+    outcome: "Higher first-time fix rate, fewer repeat truck rolls, and better technician productivity.",
+    roiCategory: "Cost reduction",
+    risk: "Medium",
+    dataSensitivity: "High",
+    approvedActions: "Optimize dispatch and routing, surface job context, recommend resolution steps",
+    humanApproval: "Required for schedule overrides and customer commitments",
+    certification: "Certified",
+    governance: "Certified",
+    adoption: 72,
+    usage: 74,
+    roiScore: 84,
+    maturity: "Scaling",
+    pattern: "Azure AI Foundry + Dynamics 365 Field Service + maps and telemetry connectors",
+    status: "Live",
+    url: "https://fieldservice.patersonindustrydemos.com",
+  },
+  {
     id: "executive-copilot",
     name: "Executive Copilot",
     room: "executive",
@@ -855,8 +879,8 @@ export const agentById = (id: string) => agents.find((a) => a.id === id);
 export const agentByName = (name: string) => agents.find((a) => a.name === name)!;
 
 export const kpis = [
-  { label: "Agent Blueprints", value: "22", sub: "Across 10 business functions", tone: "blue" },
-  { label: "Business Functions Covered", value: "10", sub: "Network to Customer Support", tone: "teal" },
+  { label: "Agent Blueprints", value: "23", sub: "Across 11 business functions", tone: "blue" },
+  { label: "Business Functions Covered", value: "11", sub: "Network to Field Services", tone: "teal" },
   { label: "Annual Value Potential", value: "$186M", sub: "Validated business case", tone: "green" },
   {
     label: "Productivity Hours Recovered",
@@ -1313,7 +1337,7 @@ export const governanceControls = [
   { name: "Business sponsor", detail: "Executive sponsor accountable for value", tone: "teal" },
   { name: "Approved data sources", detail: "Purview-labelled sources per agent", tone: "teal" },
   { name: "Approved actions", detail: "Explicit action scopes, deny by default", tone: "cyan" },
-  { name: "Human approval requirements", detail: "17 of 22 agents gated on human approval", tone: "amber" },
+  { name: "Human approval requirements", detail: "18 of 23 agents gated on human approval", tone: "amber" },
   { name: "Risk classification", detail: "5 high, 9 medium, 4 low-medium", tone: "red" },
   { name: "Certification status", detail: "12 certified, 4 production candidates, 2 in review", tone: "green" },
   { name: "Usage analytics", detail: "Daily active usage and task success telemetry", tone: "blue" },
