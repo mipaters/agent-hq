@@ -9,6 +9,7 @@ export type RoomId =
   | "legal"
   | "security"
   | "support"
+  | "fieldservice"
   | "executive";
 
 export type Agent = {
@@ -229,6 +230,24 @@ export const rooms: Room[] = [
     governance: "Certified, care-owned",
     maturity: 79,
     accent: "var(--ms-teal)",
+  },
+  {
+    id: "fieldservice",
+    name: "Field Services Agentic Solutions",
+    short: "Field Services Room",
+    persona: "Field Operations Leader, Dispatch Leader, Workforce Management Leader, Installation & Repair Leader",
+    owner: "Field Operations Leader",
+    outcomes: [
+      "Higher first-time fix rate",
+      "Fewer repeat truck rolls",
+      "Smarter dispatch and routing",
+      "Better technician productivity",
+      "Improved on-time arrival",
+      "Better customer install experience",
+    ],
+    governance: "Certified, field-operations-owned",
+    maturity: 73,
+    accent: "var(--ms-amber)",
   },
   {
     id: "executive",
