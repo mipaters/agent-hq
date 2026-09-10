@@ -1658,6 +1658,16 @@ export const customerDemos: CustomerDemo[] = [
         url: "https://fieldservice.patersonindustrydemos.com",
         tone: "red",
       },
+      {
+        id: "rogers-household360",
+        name: "Rogers Household360 AI Solution",
+        category: "Consumer",
+        description:
+          "Household360 AI demo for Rogers showing a unified household view that combines customer, service, device, and usage signals to surface personalized offers, care actions, and retention next-best-actions.",
+        outcome: "Stronger household loyalty, higher attach rates, and improved customer lifetime value.",
+        url: "https://rogershousehold.patersonindustrydemos.com",
+        tone: "red",
+      },
     ],
   },
   {
