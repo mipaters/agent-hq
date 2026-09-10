@@ -1576,7 +1576,7 @@ export const customerDemos: CustomerDemo[] = [
     shortName: "Rogers",
     accent: "var(--ms-red)",
     description:
-      "Customer-specific agentic demos built for Rogers Communications: the Agentic AI website and mobile app, the MLSE One App experience, autonomous network operations, Rogers Centre revenue optimization, FinOps multicloud cost management, churn reduction, and field service optimization.",
+      "Customer-specific agentic demos built for Rogers Communications: the Agentic AI website and mobile app, the MLSE One App experience, autonomous network operations, Rogers Centre revenue optimization, FinOps multicloud cost management, churn reduction, field service optimization, and Household360 AI.",
     demos: [
       {
         id: "rogers-website",
@@ -1656,6 +1656,16 @@ export const customerDemos: CustomerDemo[] = [
           "Field service optimization demo for Rogers showing intelligent dispatch, routing, technician guidance, and first-time-fix improvements for install and repair operations.",
         outcome: "Higher first-time fix rate, fewer repeat truck rolls, and better technician productivity.",
         url: "https://fieldservice.patersonindustrydemos.com",
+        tone: "red",
+      },
+      {
+        id: "rogers-household360",
+        name: "Rogers Household360 AI Solution",
+        category: "Consumer",
+        description:
+          "Household360 AI demo for Rogers showing a unified household view that combines customer, service, device, and usage signals to surface personalized offers, care actions, and retention next-best-actions.",
+        outcome: "Stronger household loyalty, higher attach rates, and improved customer lifetime value.",
+        url: "https://rogershousehold.patersonindustrydemos.com",
         tone: "red",
       },
     ],
