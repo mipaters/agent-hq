@@ -1670,4 +1670,64 @@ export const customerDemos: CustomerDemo[] = [
       },
     ],
   },
+  {
+    id: "uniti",
+    name: "Uniti Agentic Solutions",
+    shortName: "Uniti",
+    accent: "var(--ms-cyan)",
+    description:
+      "Customer-specific agentic demos built for Uniti: the Uniti mobile app experience and the Uniti web AI assistant, bringing agentic AI to customer engagement across web and mobile channels.",
+    demos: [
+      {
+        id: "uniti-mobile-app",
+        name: "Uniti Mobile App Demo",
+        category: "Mobile App",
+        description:
+          "Mobile app demo for Uniti showing an agentic AI-powered customer experience with personalized self-service, account management, and proactive recommendations on the go.",
+        outcome: "Higher digital engagement and self-service adoption for Uniti mobile customers.",
+        url: "https://unitimobileapp.patersonindustrydemos.com",
+        tone: "cyan",
+      },
+      {
+        id: "uniti-web-assistant",
+        name: "Uniti Web AI Assistant Demo",
+        category: "Website",
+        description:
+          "Web AI assistant demo for Uniti showing conversational support, guided plan selection, and personalized content delivered directly on the Uniti website.",
+        outcome: "Faster resolutions and higher conversion from website visits to sign-ups.",
+        url: "https://uniti.patersonindustrydemos.com",
+        tone: "cyan",
+      },
+    ],
+  },
+  {
+    id: "charter",
+    name: "Charter Agentic Solutions",
+    shortName: "Charter",
+    accent: "var(--ms-green)",
+    description:
+      "Customer-specific agentic demos built for Charter (Spectrum): the Spectrum mobile app experience and the Charter website AI assistant, bringing agentic AI to Spectrum customers across web and mobile.",
+    demos: [
+      {
+        id: "charter-spectrum-mobile",
+        name: "Charter Spectrum Mobile App Demo",
+        category: "Mobile App",
+        description:
+          "Spectrum mobile app demo for Charter showing agentic AI-powered account management, personalized offers, proactive care, and intelligent self-service for Spectrum customers.",
+        outcome: "Higher app engagement, fewer support calls, and stronger Spectrum loyalty.",
+        url: "https://spectrummobile.patersonindustrydemos.com",
+        tone: "green",
+      },
+      {
+        id: "charter-spectrum-web",
+        name: "Charter Website AI Assistant Demo",
+        category: "Website",
+        description:
+          "Website AI assistant demo for Charter showing conversational guidance, plan and package recommendations, and streamlined troubleshooting on the Spectrum website.",
+        outcome: "Faster online resolutions and improved digital sales conversion for Charter.",
+        url: "https://spectrumweb.patersonindustrydemos.com",
+        tone: "green",
+      },
+    ],
+  },
 ];
