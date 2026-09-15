@@ -534,7 +534,7 @@ export const agents: Agent[] = [
     maturity: "Scaling",
     pattern: "Azure AI Foundry + CRM connectors",
     status: "Live",
-    url: "https://mobile-growth-agent.lovable.app/",
+    url: "https://mobileattach.patersonindustrydemos.com",
   },
   {
     id: "life-events",
