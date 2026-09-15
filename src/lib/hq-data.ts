@@ -558,7 +558,7 @@ export const agents: Agent[] = [
     maturity: "Piloting",
     pattern: "Purview-governed signals + Copilot Studio",
     status: "Ramping",
-    url: "https://event-aura-agent.lovable.app/",
+    url: "https://lifeeventsagent.patersonindustrydemos.com",
   },
   {
     id: "smb-inside-sales",
