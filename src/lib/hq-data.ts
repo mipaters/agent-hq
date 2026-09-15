@@ -294,7 +294,7 @@ export const agents: Agent[] = [
     maturity: "Scaling",
     pattern: "Azure AI Foundry + Fabric telemetry",
     status: "Live",
-    url: "https://net-copilot-ai.lovable.app/",
+    url: "https://networkcopilot.patersonindustrydemos.com/",
   },
   {
     id: "network-guardian",
@@ -318,7 +318,7 @@ export const agents: Agent[] = [
     maturity: "Scaling",
     pattern: "Copilot Studio agent + event-driven orchestration",
     status: "Live",
-    url: "https://agent-network-guard.lovable.app/",
+    url: "https://networkguardian.patersonindustrydemos.com/",
   },
   {
     id: "multicloud-finops",
@@ -342,7 +342,7 @@ export const agents: Agent[] = [
     maturity: "Scaling",
     pattern: "Fabric + Power BI embedded analytics",
     status: "Live",
-    url: "https://finops-insight-bot.lovable.app/",
+    url: "https://finopscloud.patersonindustrydemos.com/",
   },
   {
     id: "enterprise-it-copilot",
@@ -366,7 +366,7 @@ export const agents: Agent[] = [
     maturity: "Scaling",
     pattern: "Copilot Studio + ITSM connectors",
     status: "Live",
-    url: "https://vital-copilot.lovable.app/",
+    url: "https://itcopilot.patersonindustrydemos.com/",
   },
   {
     id: "media-rights",
@@ -390,7 +390,7 @@ export const agents: Agent[] = [
     maturity: "Piloting",
     pattern: "Azure AI Search + Purview-labelled content",
     status: "Ramping",
-    url: "https://rights-flow.lovable.app/",
+    url: "https://mediarights.patersonindustrydemos.com/",
   },
   {
     id: "venue-revenue",
@@ -414,7 +414,7 @@ export const agents: Agent[] = [
     maturity: "Scaling",
     pattern: "Fabric semantic model + Power BI embedded",
     status: "Live",
-    url: "https://event-revenue-optimizerdemo.lovable.app/",
+    url: "https://venuerevenue.patersonindustrydemos.com/",
   },
   {
     id: "venue-sponsorship",
@@ -438,7 +438,7 @@ export const agents: Agent[] = [
     maturity: "Piloting",
     pattern: "Copilot Studio agent + Dataverse",
     status: "Ramping",
-    url: "https://sponsor-sense-ai.lovable.app/",
+    url: "https://venuesponsorship.patersonindustrydemos.com/",
   },
   {
     id: "talent-spark",
@@ -462,7 +462,7 @@ export const agents: Agent[] = [
     maturity: "Piloting",
     pattern: "Azure OpenAI + Entra-scoped HR data",
     status: "Ramping",
-    url: "https://scout-swarm-ai.lovable.app/",
+    url: "https://talentspark.patersonindustrydemos.com/",
   },
   {
     id: "churn-reduction",
@@ -582,7 +582,7 @@ export const agents: Agent[] = [
     maturity: "Scaling",
     pattern: "Copilot Studio + Dynamics/CRM connectors",
     status: "Live",
-    url: "https://agent-riley-hq.lovable.app/",
+    url: "https://projectriley.patersonindustrydemos.com/",
   },
   {
     id: "enterprise-sales-coach",
@@ -606,7 +606,7 @@ export const agents: Agent[] = [
     maturity: "Scaling",
     pattern: "Azure AI Foundry + Dynamics/CRM connectors",
     status: "Live",
-    url: "https://deal-dynamics-coach.lovable.app/",
+    url: "https://dealcoach.patersonindustrydemos.com/",
   },
   {
     id: "revenue-assurance",
@@ -630,7 +630,7 @@ export const agents: Agent[] = [
     maturity: "Scaling",
     pattern: "Fabric finance lakehouse + Azure OpenAI",
     status: "Live",
-    url: "https://earnflow-detective.lovable.app/",
+    url: "https://revenueassurance.patersonindustrydemos.com/",
   },
   {
     id: "regulatory-compliance",
@@ -654,7 +654,7 @@ export const agents: Agent[] = [
     maturity: "Piloting",
     pattern: "Purview + Azure AI Search over policy corpus",
     status: "Ramping",
-    url: "https://guardian-sage-04.lovable.app/",
+    url: "https://regulatorycompliance.patersonindustrydemos.com/",
   },
   {
     id: "contracts-copilot",
@@ -678,7 +678,7 @@ export const agents: Agent[] = [
     maturity: "Scaling",
     pattern: "Azure AI Search + Microsoft Graph connectors",
     status: "Live",
-    url: "https://synapsis-contracts.lovable.app/",
+    url: "https://contractscopilot.patersonindustrydemos.com/",
   },
   {
     id: "executive-value-agent",
@@ -702,7 +702,7 @@ export const agents: Agent[] = [
     maturity: "Scaling",
     pattern: "Agent365 telemetry + Fabric + Power BI",
     status: "Live",
-    url: "https://vital-copilot.lovable.app/",
+    url: "https://itcopilot.patersonindustrydemos.com/",
   },
   {
     id: "security-investigation-ai",
@@ -726,7 +726,7 @@ export const agents: Agent[] = [
     maturity: "Scaling",
     pattern: "Azure AI Foundry + Microsoft Sentinel signals",
     status: "Live",
-    url: "https://insight-scribe-710.lovable.app",
+    url: "https://securityguardian.patersonindustrydemos.com",
   },
   {
     id: "shield-sentinel",
@@ -750,7 +750,7 @@ export const agents: Agent[] = [
     maturity: "Scaling",
     pattern: "Copilot Studio agents + Defender/Sentinel + Entra",
     status: "Live",
-    url: "https://shield-ai-sentinels.lovable.app",
+    url: "https://securitysentinels.patersonindustrydemos.com",
   },
   {
     id: "assist-pro-genius",
@@ -774,7 +774,7 @@ export const agents: Agent[] = [
     maturity: "Scaling",
     pattern: "Azure AI Foundry + Dynamics 365 Customer Service",
     status: "Live",
-    url: "https://assist-pro-genius.lovable.app",
+    url: "https://agentassist.patersonindustrydemos.com",
   },
   {
     id: "billing-inquiry-ai",
@@ -798,7 +798,7 @@ export const agents: Agent[] = [
     maturity: "Scaling",
     pattern: "Azure AI Foundry + Dynamics 365 Customer Service",
     status: "Live",
-    url: "https://bill-clarity-companion.lovable.app",
+    url: "https://billinginquiry.patersonindustrydemos.com",
   },
   {
     id: "network-genius-ai",
@@ -822,7 +822,7 @@ export const agents: Agent[] = [
     maturity: "Scaling",
     pattern: "Copilot Studio agent + network telemetry connectors",
     status: "Live",
-    url: "https://network-genius-ai.lovable.app",
+    url: "https://networkgenius.patersonindustrydemos.com",
   },
   {
     id: "field-service-ai",
@@ -870,7 +870,7 @@ export const agents: Agent[] = [
     maturity: "Scaling",
     pattern: "Azure AI Foundry + Fabric + Power BI + Agent365 telemetry",
     status: "Live",
-    url: "https://executive-copilot-core.lovable.app",
+    url: "https://executivecopilot.patersonindustrydemos.com",
   },
 ];
 
