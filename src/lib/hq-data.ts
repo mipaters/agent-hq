@@ -558,7 +558,7 @@ export const agents: Agent[] = [
     maturity: "Piloting",
     pattern: "Purview-governed signals + Copilot Studio",
     status: "Ramping",
-    url: "https://lifeeventsagent.patersonindustrydemos.com",
+    url: "https://lifeevents.patersonindustrydemos.com",
   },
   {
     id: "smb-inside-sales",
