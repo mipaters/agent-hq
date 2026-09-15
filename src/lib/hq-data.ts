@@ -1730,4 +1730,34 @@ export const customerDemos: CustomerDemo[] = [
       },
     ],
   },
+  {
+    id: "sasktel",
+    name: "SaskTel Agentic Solutions",
+    shortName: "SaskTel",
+    accent: "var(--ms-amber)",
+    description:
+      "Customer-specific agentic demos built for SaskTel: the SaskTel mobile app experience and the SaskTel website AI assistant, bringing agentic AI to customer engagement across web and mobile channels.",
+    demos: [
+      {
+        id: "sasktel-web-assistant",
+        name: "SaskTel Website AI Assistant Demo",
+        category: "Website",
+        description:
+          "Website AI assistant demo for SaskTel showing conversational support, guided plan and bundle selection, and personalized recommendations delivered directly on the SaskTel website.",
+        outcome: "Faster online resolutions and higher conversion from website visits to sign-ups.",
+        url: "https://sasktelwebsite.patersonindustrydemos.com",
+        tone: "amber",
+      },
+      {
+        id: "sasktel-mobile-app",
+        name: "SaskTel Mobile App Demo",
+        category: "Mobile App",
+        description:
+          "Mobile app demo for SaskTel showing an agentic AI-powered customer experience with personalized self-service, account management, and proactive recommendations on the go.",
+        outcome: "Higher app engagement, fewer support calls, and stronger SaskTel loyalty.",
+        url: "https://sasktel.patersonindustrydemos.com",
+        tone: "amber",
+      },
+    ],
+  },
 ];
