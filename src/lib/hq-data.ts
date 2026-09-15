@@ -510,7 +510,7 @@ export const agents: Agent[] = [
     maturity: "Scaling",
     pattern: "Fabric geospatial model + Power BI",
     status: "Live",
-    url: "https://territory-vision-app.lovable.app/",
+    url: "https://growthplanning.patersonindustrydemos.com",
   },
   {
     id: "mobile-attach",
